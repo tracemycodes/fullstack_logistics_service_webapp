@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'style-components'
+import { createGlobalStyle } from "styled-components"
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -13,10 +13,10 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
   
-    background-color: ${ ( { theme } ) => theme.background };
+    background-color: #fff;
 }
 `
 
 export const LightTheme = {
-  background: '#fff',
+  background: 'blue',
 }
