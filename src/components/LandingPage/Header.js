@@ -15,7 +15,7 @@ padding: .9rem .5rem;
 font-size: .75rem;
 display: flex;
 justify-content: space-between;
-  color: #93AFC1;
+color: #93AFC1;
   
   a {
     color: #93AFC1;
