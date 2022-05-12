@@ -15,6 +15,6 @@ export const Btn = styled.button`
   color: #fff;
   background-color: #EC0101;
   border: none;
-  border-radius: 0.1rem;
+  border-radius: 0.3rem;
   font-weight: bold;
 `

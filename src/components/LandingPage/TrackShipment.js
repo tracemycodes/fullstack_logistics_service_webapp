@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
-import { DivContainer } from '../../styles/styles';
+import { Btn, DivContainer } from '../../styles/styles';
 
 const Banner = styled.div`
   height: 14.5rem;
   width: 100%;
   border: 2px solid blue;
   position: relative;
-  background-color: green;
+  // background-color: green;
   &:after {
     content: ' ';
     position: absolute;
@@ -25,9 +25,58 @@ const Banner = styled.div`
   }
 `;
 
+const TrackBtn = styled(Btn)`
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+`
+
 const TrackSection = styled(DivContainer)`
   margin-top: -4rem;
+  z-index: 2;
+  position: relative;
+
+  div {
+    background-color: #fff;
+    padding: 1.25rem;
+    // border: 2px solid purple;
+    font-weight: bold;
+    width: 15rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: .8rem;
+    border-top-left-radius: .8rem;
+    margin: auto;
+    color: rgb(0, 39, 65);
+  }
   
+  form {
+    border: 2px solid blue;
+    margin-bottom: 10rem;
+    border-bottom-right-radius: .8rem;
+    border-bottom-left-radius: .8rem;
+    background-color: #fff;
+    color: rgb(0, 39, 65);
+    padding: 1.25rem;
+
+    label {
+      font-size: .9rem;
+      margin-right: 1rem;
+    }
+    input {
+      width: 60%;
+      background-color: #e8ebf2;
+      border: none;
+      padding: .5rem;
+      border-radius: .3rem;
+      
+      :focus {
+        outline: 2px solid #002741;
+      }
+    }
+  }
+
 `;
 
 const TrackShipment = () => {
@@ -38,7 +87,22 @@ const TrackShipment = () => {
           <h2>Track your shipment with our latest shipment Tracker</h2>
         </DivContainer>
       </Banner>
-      <TrackSection></TrackSection>
+      <TrackSection>
+        <div>
+          <p>
+
+          Track My Shipment
+          </p>
+        </div>
+        <form>
+          <label htmlFor="booking-no">Booking no, Containers no or B/L</label>
+          <input type="text" name="booking-no" id="tack-no" />
+          <TrackBtn type='submit'>Track Shipment</TrackBtn>
+        </form>
+        <section>
+          
+        </section>
+      </TrackSection>
     </>
   );
 };
