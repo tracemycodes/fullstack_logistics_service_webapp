@@ -5,7 +5,6 @@ import { DivContainer } from '../../styles/styles';
 
 const SmartSection = styled.section`
   width: 100%;
-  height: 30rem;
   position: relative;
   border: 2px solid yellow;
 
@@ -49,6 +48,12 @@ const SmartSection = styled.section`
       height: 206px;
     }
   
+  }
+
+  .map-div {
+    border: 2px solid orange;
+    height: 27rem;
+    margin: 2rem auto 4rem;
   }
 
 
