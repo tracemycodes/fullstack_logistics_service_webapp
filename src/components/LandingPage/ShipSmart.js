@@ -1,26 +1,49 @@
 import React from 'react';
 import styled from 'styled-components';
+import myimg from '../../assets/myimg.jpg';
 
 const SmartSection = styled.section`
   width: 100%;
   height: 30rem;
-  border: 2px solid red;
   position: relative;
-  background-color: blue;
+  border: 2px solid yellow;
+
+
+  .overlay-img{
+  border: 2px solid blue;
+  height: 24rem;
+  background-image: url(${myimg});
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  
+  &:before {
+    content: " ";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24rem;
+    background-color: rgb(0, 39, 65, 0.5);
+    position: absolute;
+  }
+  }
+
 
   .custom-shape-divider-bottom-1652363935 {
     position: absolute;
-    bottom: 0;
+    top: 5rem;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    border 2px solid red;
   }
 
   .custom-shape-divider-bottom-1652363935 svg {
     position: relative;
     display: block;
+    border: 2px solid green;
     width: calc(112% + 1.3px);
     height: 306px;
     transform: rotateY(180deg);
@@ -40,6 +63,7 @@ const SmartSection = styled.section`
 const ShipSmart = () => {
   return (
     <SmartSection>
+      <div className='overlay-img'></div>
       <div className='custom-shape-divider-bottom-1652363935'>
         <svg
           data-name='Layer 1'
