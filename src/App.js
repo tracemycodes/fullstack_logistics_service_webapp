@@ -1,4 +1,5 @@
 import AboutShipment from "./components/LandingPage/AboutShipment";
+import Advantages from "./components/LandingPage/Advantages";
 import Header from "./components/LandingPage/Header";
 import LandingPage from "./components/LandingPage/LandingPage";
 import LogisticsService from "./components/LandingPage/LogisticsService";
@@ -15,6 +16,7 @@ function App() {
       <LogisticsService/>
       <TrackShipment/>
       <ShipSmart/>
+      <Advantages/>
     </div>
   );
 }

@@ -6,7 +6,6 @@ import { DivContainer } from '../../styles/styles';
 const SmartSection = styled.section`
   width: 100%;
   position: relative;
-  border: 2px solid yellow;
 
 
   .overlay-img{
