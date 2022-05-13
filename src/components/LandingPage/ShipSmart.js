@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import myimg from '../../assets/myimg.jpg';
+import { DivContainer } from '../../styles/styles';
 
 const SmartSection = styled.section`
   width: 100%;
@@ -10,22 +11,44 @@ const SmartSection = styled.section`
 
 
   .overlay-img{
-  border: 2px solid blue;
   height: 24rem;
   background-image: url(${myimg});
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 
+  h2 {
+    color: #fff;
+    position: absolute;
+    font-size: 1.5rem;
+    top: 2rem;
+  }
+
+  p {
+    color: #e1e1e1;
+    position: absolute;
+    font-size: .9rem;
+    top: 5rem;
+    max-width: 67%;
+    width: 30rem;
+  }
   
   &:before {
     content: " ";
     top: 0;
     left: 0;
     width: 100%;
-    height: 24rem;
-    background-color: rgb(0, 39, 65, 0.5);
+    height: 100%;
+    background-color: rgb(0, 39, 65, 0.8);
     position: absolute;
+    z-index: 0;
+
   }
+
+  @media (max-width: 767px) { 
+      height: 206px;
+    }
+  
   }
 
 
@@ -35,22 +58,28 @@ const SmartSection = styled.section`
     left: 0;
     width: 100%;
     overflow: hidden;
+    // display: none;
     line-height: 0;
     transform: rotate(180deg);
     border 2px solid red;
+
+    @media (max-width: 767px) {
+      top: 6rem;
+    }
   }
 
   .custom-shape-divider-bottom-1652363935 svg {
     position: relative;
     display: block;
-    border: 2px solid green;
-    width: calc(112% + 1.3px);
+    // width: calc(112% - 1.3px);
+    width: calc(112% + 39rem);
     height: 306px;
     transform: rotateY(180deg);
 
     @media (max-width: 767px) {
       width: calc(147% + 1.3px);
-      height: 306px;
+      // height: 306px;
+      height: 110px;
     }
   }
 
@@ -63,7 +92,21 @@ const SmartSection = styled.section`
 const ShipSmart = () => {
   return (
     <SmartSection>
-      <div className='overlay-img'></div>
+      <div className='overlay-img'>
+        <DivContainer>
+          <h2>Ship Smart with Transtics</h2>
+          <p>
+            Solving your supply chain needs from end to end, taking the
+            complexity out of container shipping. We are at the forefront of
+            developing innovative supply chain solutions
+          </p>
+        </DivContainer>
+      </div>
+      <DivContainer>
+        <div className='map-div'>
+          <div className='mini-map'></div>
+        </div>
+      </DivContainer>
       <div className='custom-shape-divider-bottom-1652363935'>
         <svg
           data-name='Layer 1'
