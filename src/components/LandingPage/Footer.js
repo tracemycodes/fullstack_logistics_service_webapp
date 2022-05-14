@@ -41,7 +41,7 @@ const FooterDiv = styled(DivContainer)`
     color: #E6E6E6;
   }
   > * + * {
-    margin-left: 4rem;
+    margin-left: 6rem;
    
   }
   .social-contact {
@@ -78,7 +78,7 @@ const Footer = () => {
             <a href="#">Finance Audit</a>
           </div>
           <div className='social-contact'>
-            <h3>Our Services</h3>
+            <h3>Social Contact</h3>
             <div>
 
             </div>
