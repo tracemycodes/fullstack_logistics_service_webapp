@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 import { Btn, DivContainer } from '../../styles/styles'
 import landingImg1 from '../../assets/ship-container-harbor.jpg'
+import landingImg2 from '../../assets/industrial-port-container-yard.jpg'
 
 const CarouselDiv = styled.section`
   padding: 9.5rem 0rem 14.5rem;
   position: relative;
   border: 2px solid green;
-  background-image: url(${landingImg1});
+  background-image: url(${landingImg2});
   background-size: cover;
   background-position: center;
   color: #fff;
@@ -19,7 +20,7 @@ const CarouselDiv = styled.section`
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0, 0.6);
+    background-color: rgb(0, 0, 0, 0.5);
   }
 
   h1 {
@@ -34,7 +35,6 @@ const CarouselDiv = styled.section`
   p {
     margin: 1rem 0 2rem;
     position: relative;
-    
     font-size: 1.25rem;
     color: #E1E1E1;
     z-index: 2;
