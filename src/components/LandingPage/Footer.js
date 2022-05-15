@@ -10,6 +10,11 @@ const FooterSection = styled.section`
   .footer-body {
     background-color: rgb(0, 39, 65);
   }
+  .footer-terms {
+    background-color: #03182d;
+    width: 100%;
+    border: 2px solid yellow;
+  }
 `;
 const LogoDiv = styled(DivContainer)`
   display: flex;
@@ -41,11 +46,26 @@ const FooterDiv = styled(DivContainer)`
     color: #E6E6E6;
   }
   > * + * {
-    margin-left: 6rem;
+    margin-left: 4rem;
    
   }
   .social-contact {
     margin-left: auto;
+  }
+`;
+
+const FooterTerms = styled(DivContainer)`
+  display: flex;
+  align-item: center;
+  padding: 2.4rem 0;
+  color: #E6E6E6;
+  font-size: .8rem;
+
+  > * + * {
+    margin-left: 2rem;
+  }
+  .right-reserved {
+    margin-right: auto;
   }
 `;
 
@@ -84,6 +104,13 @@ const Footer = () => {
             </div>
           </div>
         </FooterDiv>
+      </div>
+      <div className="footer-terms">
+        <FooterTerms>
+          <p className="right-reserved"> &copy; - Transtics | All Rights Reserved</p>
+          <p>Terms of service</p>
+          <p>Privacy Policy</p>
+        </FooterTerms>
       </div>
     </FooterSection>
   );
