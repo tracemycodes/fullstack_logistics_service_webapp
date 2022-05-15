@@ -34,6 +34,7 @@ const CarouselDiv = styled.section`
   p {
     margin: 1rem 0 2rem;
     position: relative;
+    
     font-size: 1.25rem;
     color: #E1E1E1;
     z-index: 2;
