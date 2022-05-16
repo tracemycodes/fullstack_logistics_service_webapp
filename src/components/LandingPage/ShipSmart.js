@@ -6,6 +6,7 @@ import { DivContainer } from '../../styles/styles';
 const SmartSection = styled.section`
   width: 100%;
   position: relative;
+  z-index: -1;
 
 
   .overlay-img{
@@ -14,6 +15,7 @@ const SmartSection = styled.section`
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+  z-index: -2;
 
   h2 {
     color: #fff;
@@ -66,6 +68,7 @@ const SmartSection = styled.section`
     line-height: 0;
     transform: rotate(180deg);
     border 2px solid red;
+    z-index: -1;
 
     @media (max-width: 767px) {
       top: 6rem;

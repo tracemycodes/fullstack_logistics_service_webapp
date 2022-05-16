@@ -1,22 +1,41 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 
-const SideNavBar = styled.nav`
-  position: absolute;
-  max-width: 20rem;
-  width: 70%;
+const SideNavBar = styled.section`
+  position: fixed;
+  width: 100vw;
   left: 0;
   top: 0;
   height: 100vh;
+  transition: transform ease-in .8s;
+  
+  ${({toggleNav}) => toggleNav && css`
+  background-color: ${({theme}) => theme.dark_overlay};
+  `}
+
+  nav {
+  max-width: 20rem;
+  width: 70%;
+  height: 100%;
   border: 3px solid red;
-  z.index: 4;
+  transform: translateX(-100%);
+  transition: transform ease-in .8s;
+  z.index: 444;
+  
+  ${({toggleNav}) => toggleNav && css`
+  background-color: yellow;
+  transform: translateX(0%);
+  `}
+  }
 `
 
-const SideNav = () => {
+const SideNav = ({ toggleNav }) => {
   return (
-    <SideNavBar>
-      
+    <SideNavBar toggleNav={toggleNav}>
+      <nav>
+
+      </nav>
     </SideNavBar>
   )
 }

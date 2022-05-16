@@ -5,7 +5,7 @@ import { DivContainer } from '../../styles/styles'
 
 const ReviewSection = styled.section`
   border: 2px solid black;
-  padding-bottom: 5rem;  
+  padding-bottom: 5rem; 
 
   .banner-img {
     border: 2px solid purple;
@@ -35,7 +35,7 @@ const ReviewSection = styled.section`
 
 const ReviewContainer = styled(DivContainer)`
   margin-top: -12rem;
-  z-index: 2;
+  // z-index: -1;
   .carousel {
     display: flex;
     align-items: center;
@@ -50,6 +50,7 @@ const ReviewContainer = styled(DivContainer)`
       border-radius: .3rem;
       position: relative;
       color: rgb(0, 39, 65);
+      z-index: -1;
 
       .ques-icon {
         position: absolute;

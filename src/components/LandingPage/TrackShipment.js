@@ -8,6 +8,7 @@ const Banner = styled.div`
   border: 2px solid blue;
   position: relative;
   // background-color: green;
+  z-index: -1;
   &:after {
     content: ' ';
     position: absolute;
@@ -23,6 +24,7 @@ const Banner = styled.div`
     font-size: 1.8rem;
     margin: 3.5rem 0;
   }
+  
 `;
 
 const TrackBtn = styled(Btn)`
@@ -33,7 +35,7 @@ const TrackBtn = styled(Btn)`
 
 const TrackSection = styled(DivContainer)`
   margin-top: -4rem;
-  z-index: 2;
+  z-index: -1;
   position: relative;
   padding-bottom: 3.6rem;
 

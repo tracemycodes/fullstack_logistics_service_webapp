@@ -11,6 +11,7 @@ const CarouselDiv = styled.section`
   background-size: cover;
   background-position: center;
   font-family: Arial, Helvetica, sans-serif;
+  z-index: -1;
   
   &:after {
     content: " ";
