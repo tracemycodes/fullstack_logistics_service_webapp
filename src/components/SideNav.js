@@ -53,13 +53,16 @@ const SideNavBar = styled.section`
         cursor: pointer;
 
         &:hover a {
-          color: red;
+          color: ${({theme}) => theme.text_orange};
         }
         &:hover {
-          background-color: blue;
+          background-color: rgb(3, 24, 45);
         }
       }
 
+    }
+    .nav-logo {
+      margin: 3rem auto 0;
     }
     a {
       text-decoration: none;
@@ -77,7 +80,7 @@ const SideNav = ({ toggleNav }) => {
   return (
     <SideNavBar toggleNav={toggleNav}>
       <nav>
-        <a href='#'>logo</a>
+        <a href='#' className='nav-logo'>logo</a>
 
         <ul>
           <li>

@@ -21,8 +21,12 @@ export const LightTheme = {
   background_darkBlue: 'rgb(0, 39, 65)',
   text_white: '#E6E6E6',
   text_grey: 'rgb(116, 146, 165)',
+  text_orange: 'rgb(236, 1, 1)',
+  text_darkBlue: 'rgb(0, 39, 65)',
   dark_overlay: 'rgb(0, 0, 0, 0.5)',
   text_h1: 'clamp(1.5rem, 7vw, 2.8rem)',
+  text_h2: 'clamp(1rem, 6.5vw, 1.8rem)',
   text_h4: 'clamp(.8rem, 3.2vw, 1.2rem)',
+  text_h5: '0.7rem',
   lineHeight_h1: 'clamp(2.4rem, 10vw, 3.75rem)',
 };

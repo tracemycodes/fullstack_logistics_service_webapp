@@ -8,22 +8,25 @@ const AboutLogistics = styled.section`
   text-align: center;
 
   h5 {
-    font-size: 0.7rem;
-    color: #ec0101;
+    font-size: ${({theme}) => theme.text_h5};
+    color: ${({theme}) => theme.text_orange};
   }
   h3 {
-    font-size: 1.8rem;
-    width: 22rem;
-    color: #002741;
+    font-size: ${({theme}) => theme.text_h2};
+    max-width: 22rem;
+    width: 100%;
+    color: ${({theme}) => theme.text_darkBlue};
     margin: 0rem auto 0.8rem;
-    border: 2px solid purple;
   }
 
   p {
-    margin: 0 9rem;
+    // margin: 0 9rem;
+    max-width: 26rem;
+    width: 100%
     color: #002741;
-    border: 2px solid pink;
     font-size: 0.85rem;
+    border: 2px solid green;
+
   }
   .about-carousel {
     border: 2px solid red;
