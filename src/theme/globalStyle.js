@@ -19,6 +19,9 @@ body {
 
 export const LightTheme = {
   background: 'blue',
-  text-white: '#E6E6E6',
-  dark-overlay: ''
+  text_white: '#E6E6E6',
+  dark_overlay: 'rgb(0, 0, 0, 0.5)',
+  text_h1: 'clamp(1.5rem, 7vw, 2.8rem)',
+  text_h4: 'clamp(.8rem, 3.2vw, 1.2rem)',
+  lineHeight_h1: 'clamp(2.4rem, 10vw, 3.75rem)',
 };

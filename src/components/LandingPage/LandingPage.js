@@ -7,36 +7,36 @@ import landingImg2 from '../../assets/industrial-port-container-yard.jpg'
 const CarouselDiv = styled.section`
   padding: 9.5rem 0rem 14.5rem;
   position: relative;
-  border: 2px solid green;
   background-image: url(${landingImg2});
   background-size: cover;
   background-position: center;
-  color: #fff;
-
-  .overlay {
-    position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  
+  &:after {
     content: " ";
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: ${({theme}) => theme.dark_overlay};
   }
 
   h1 {
-    font-size: 2.8rem;
-    border: 2px solid red;
-    color: #E1E1E1;
+    font-size: ${({theme}) => theme.text_h1};
+    line-height: ${({theme}) => theme.lineHeight_h1};
+    color: ${({theme}) => theme.text_white};
     position: relative;
-    width: 30rem;
+    max-width: 30rem;
+    width: 100%;
     z-index: 2;
   }
   
   p {
     margin: 1rem 0 2rem;
     position: relative;
-    font-size: 1.25rem;
-    color: #E1E1E1;
+    font-size: ${({theme}) => theme.text_h4};
+    color: ${({theme}) => theme.text_white};
     z-index: 2;
   }
 `
@@ -49,9 +49,6 @@ const LandingPage = () => {
       <p>with 100% Customer Satisfaction</p>
       <Btn>CONTACT US</Btn>
       </DivContainer>
-      <div className="overlay">
-
-      </div>
     </CarouselDiv>
   )
 }
