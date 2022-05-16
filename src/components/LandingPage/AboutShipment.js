@@ -1,10 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 import { DivContainer } from '../../styles/styles';
+import containerImg from '../../assets/icons/cargo-container-crane.svg'
+import { ReactComponent as ShipmentImg } from '../../assets/icons/cruise.svg'
 
 const AboutLogistics = styled.section`
-  border: 2px solid yellow;
   padding: 4rem 0;
+  color: ${({theme}) => theme.text_darkBlue};
   text-align: center;
 
   h5 {
@@ -20,24 +22,27 @@ const AboutLogistics = styled.section`
   }
 
   p {
-    // margin: 0 9rem;
-    max-width: 26rem;
+    margin: 0 auto;
+    max-width: 30rem;
     width: 100%
-    color: #002741;
-    font-size: 0.85rem;
-    border: 2px solid green;
+    color: #306587;
+    font-size: clamp(0.55rem, 4.5vw, 0.85rem);
+    text-align: justify;
 
   }
   .about-carousel {
-    border: 2px solid red;
     padding: 0.5rem 2.5rem;
     margin-top: 2rem;
     display: flex;
     gap: 2rem;
+
+    article {
+      margin-top: 1rem;
+    }
     .icon {
-      border: 2px solid orange;
-      width: 2.5rem;
-      height: 2.8rem;
+      width: 3.3rem;
+      margin: auto;
+      height: 3.3rem;
     }
     h4 {
       margin-top: 1rem;
@@ -47,9 +52,9 @@ const AboutLogistics = styled.section`
     p {
       margin: unset;
       margin: 0;
-      color: #002741;
-      border: 2px solid black;
+      text-align: center;
       margin: 1.2rem 0;
+      font-size: clamp(0.55rem, 4.5vw, 0.85rem);
     }
     a {
       text-decoration: none;
@@ -80,7 +85,9 @@ const AboutShipment = () => {
         </p>
         <div className='about-carousel'>
           <article>
-            <div className='icon'></div>
+            <div className='icon'>
+              <img src={containerImg} alt="logo"  />
+            </div>
             <h4>Secured Containers</h4>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
@@ -90,7 +97,9 @@ const AboutShipment = () => {
             <a href='#'>Read More</a>
           </article>
           <article>
-            <div className='icon'></div>
+            <div className='icon'>
+              <ShipmentImg/>
+            </div>
             <h4>Modern Vessels</h4>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
