@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Btn, DivContainer } from '../../styles/styles'
-import landingImg1 from '../../assets/ship-container-harbor.jpg'
+// import landingImg1 from '../../assets/ship-container-harbor.jpg'
 import landingImg2 from '../../assets/industrial-port-container-yard.jpg'
 
 const CarouselDiv = styled.section`

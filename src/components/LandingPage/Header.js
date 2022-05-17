@@ -3,6 +3,12 @@ import styled, {css} from 'styled-components';
 import { Btn, DivContainer } from '../../styles/styles';
 import SideNav from '../SideNav';
 
+const MainNav = styled.header`
+  width: 100%;
+  border: 2px solid yellow;
+  overflow: hidden;
+`;
+
 const NavBar = styled.header`
   background-color: ${({theme}) => theme.background_darkBlue};
 `;
@@ -28,24 +34,10 @@ const NavHeader = styled(DivContainer)`
 
 const NavBody = styled(DivContainer)`
   padding: 0.75rem 0.5rem;
-  // position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   color: ${({theme}) => theme.text_grey};
-
-  // ${({toggleNav}) => toggleNav && css`
-  
-  // &:before {
-  //   // content: " ";
-  //   position: fixed;
-  //   width: 100vw;
-  //   height: 100vh;
-  //   top: 0;
-  //   left: 0;
-  //   background-color: ${({theme}) => theme.dark_overlay};
-  // }
-  // `}
 
   .product-logo {
     border: 2px solid green;
@@ -111,7 +103,7 @@ const Header = () => {
 
 
   return (
-    <nav>
+    <MainNav>
       <NavBar>
         <NavHeader>
           <div>
@@ -145,7 +137,7 @@ const Header = () => {
         </div>
         <SideNav toggleNav={sideNav} /> 
       </NavBody>
-    </nav>
+    </MainNav>
   );
 };
 

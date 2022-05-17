@@ -4,38 +4,46 @@ import { DivContainer } from '../../styles/styles';
 
 const Section = styled.section`
   padding: 4rem 0rem;
-  border: 1px solid salmon;
   //  background-color: #F8F9FB;
-  background-color: #e8ebf2;
+  background-color: ${({theme}) => theme.text_ashGrey};
+  border: 2px solid green;
+  overflow: hidden;
 
   h3 {
     text-align: center;
-    font-size: 1.8rem;
+    font-size: ${({theme}) => theme.text_h2};
+    color: ${({theme}) => theme.text_darkBlue};
   }
   .section-details {
-    border: 2px solid green;
-    width: 34rem;
-    font-size: 0.85rem;
+    max-width: 34rem;
+    width: 90%;
+    color: ${({theme}) => theme.text_darkBlue};
+    font-size: ${({theme}) => theme.text_p1};
     text-align: center;
     margin: 1rem auto;
+
+    @media (max-width: 500px) {
+      text-align: justify;
+    }
   }
   .tab-group {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1.2rem;
-
+    
     button {
       padding: 0.5rem 1rem;
+      font-size: clamp(0.68rem, 3vw, 0.75rem);
       border: none;
-      background-color: #fff;
+      background-color: ${({theme}) => theme.text_light};      
       margin: 0 0.1rem;
-      color: #002741;
+      color: ${({theme}) => theme.text_darkBlue};
       font-weight: 600;
 
-      &: hover {
-        background-color: #002741;
-        color: #fff;
+      &:hover {
+        background-color: ${({theme}) => theme.text_darkBlue};
+        color: ${({theme}) => theme.text_light};
       }
     }
     .btn-left {
@@ -46,29 +54,29 @@ const Section = styled.section`
     }
   }
   .logistics-carousel {
-    border: 2px solid red;
     display: flex;
     align-items: center;
     gap: 1.4rem;
 
     .card {
-      border: 2px solid blue;
       margin-top: 1rem;
-      color: #002741;
+      color: ${({theme}) => theme.text_darkBlue};
+      background-color: ${({theme}) => theme.text_light};
+      border: 2px solid green;
       border-bottom-left-radius: .8rem;
       border-bottom-right-radius: .8rem;
     }
     h4 {
       margin: 0.8rem 1.3rem 0rem;
-      font-size: 1rem;
+      font-size: ${({theme}) => theme.text_h3};
       font-weight: 500;
     }
     p {
       margin: 1.3rem;
-      font-size: 0.83rem;
+      font-size: ${({theme}) => theme.text_p1};
     }
     .card-num {
-      color: #ec0101;
+      color: ${({theme}) => theme.text_orange};
       font-weight: bold;
       margin-right: 0.2rem;
     }
@@ -86,7 +94,7 @@ const Section = styled.section`
         width: 100%;
       }
       :hover:after {
-        background-color: rgb(0, 39, 65, 0.8);
+        background-color: ${({theme}) => theme.text_blue_overlay};
       }
     }
   }

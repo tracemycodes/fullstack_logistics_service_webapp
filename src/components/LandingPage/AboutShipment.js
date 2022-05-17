@@ -2,16 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { DivContainer } from '../../styles/styles';
 import containerImg from '../../assets/icons/cargo-container-crane.svg'
-import { ReactComponent as ShipmentImg } from '../../assets/icons/cruise.svg'
+import shipmentImg  from '../../assets/icons/cruise.svg'
 
 const AboutLogistics = styled.section`
   padding: 4rem 0;
   color: ${({theme}) => theme.text_darkBlue};
   text-align: center;
+  width: 100%;
+  border: 2px solid red;
+  overflow: hidden;
 
   h5 {
     font-size: ${({theme}) => theme.text_h5};
     color: ${({theme}) => theme.text_orange};
+    margin-bottom: .4rem;
   }
   h3 {
     font-size: ${({theme}) => theme.text_h2};
@@ -26,7 +30,7 @@ const AboutLogistics = styled.section`
     max-width: 30rem;
     width: 100%
     color: #306587;
-    font-size: clamp(0.55rem, 4.5vw, 0.85rem);
+    font-size: ${({theme}) => theme.text_p1};
     text-align: justify;
 
   }
@@ -54,7 +58,7 @@ const AboutLogistics = styled.section`
       margin: 0;
       text-align: center;
       margin: 1.2rem 0;
-      font-size: clamp(0.55rem, 4.5vw, 0.85rem);
+      font-size: ${({theme}) => theme.text_p1};
     }
     a {
       text-decoration: none;
@@ -98,7 +102,7 @@ const AboutShipment = () => {
           </article>
           <article>
             <div className='icon'>
-              <ShipmentImg/>
+              <img src={shipmentImg} alt="" />
             </div>
             <h4>Modern Vessels</h4>
             <p>

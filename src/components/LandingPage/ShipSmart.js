@@ -2,11 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 import myimg from '../../assets/myimg.jpg';
 import { DivContainer } from '../../styles/styles';
+import mapImg from '../../assets/11045.jpg'
 
 const SmartSection = styled.section`
   width: 100%;
   position: relative;
   z-index: -1;
+  border: 2px solid yellow;
 
 
   .overlay-img{
@@ -52,9 +54,14 @@ const SmartSection = styled.section`
   }
 
   .map-div {
-    border: 2px solid orange;
-    height: 27rem;
+    height: 29rem;
     margin: 2rem auto 4rem;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
 
@@ -64,10 +71,8 @@ const SmartSection = styled.section`
     left: 0;
     width: 100%;
     overflow: hidden;
-    // display: none;
     line-height: 0;
     transform: rotate(180deg);
-    border 2px solid red;
     z-index: -1;
 
     @media (max-width: 767px) {
@@ -111,6 +116,7 @@ const ShipSmart = () => {
       </div>
       <DivContainer>
         <div className='map-div'>
+          <img src={mapImg} alt="" />
           <div className='mini-map'></div>
         </div>
       </DivContainer>
