@@ -3,13 +3,16 @@ import styled from 'styled-components';
 import { DivContainer } from '../../styles/styles';
 import containerImg from '../../assets/icons/cargo-container-crane.svg'
 import shipmentImg  from '../../assets/icons/cruise.svg'
+import mapImg  from '../../assets/map-mercator.svg'
 
 const AboutLogistics = styled.section`
   padding: 4rem 0;
   color: ${({theme}) => theme.text_darkBlue};
+  background-image: url(${mapImg});
+  background-cover: cover;
+  background-position: center;
   text-align: center;
   width: 100%;
-  border: 2px solid red;
   overflow: hidden;
 
   h5 {
@@ -42,6 +45,9 @@ const AboutLogistics = styled.section`
 
     article {
       margin-top: 1rem;
+      img {
+        filter: brightness(0) saturate(100%) invert(27%) sepia(88%) saturate(7180%) hue-rotate(356deg) brightness(87%) contrast(114%);
+      }
     }
     .icon {
       width: 3.3rem;
@@ -50,7 +56,7 @@ const AboutLogistics = styled.section`
     }
     h4 {
       margin-top: 1rem;
-      color: #002741;
+      color: ${({theme}) => theme.text_darkBlue};
       font-weight: bold;
     }
     p {
@@ -62,7 +68,7 @@ const AboutLogistics = styled.section`
     }
     a {
       text-decoration: none;
-      color: #ec0101;
+      color: ${({theme}) => theme.text_orange};
       font-size: 0.8rem;
       font-weight: bold;
     }
