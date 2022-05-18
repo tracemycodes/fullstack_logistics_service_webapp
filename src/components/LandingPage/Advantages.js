@@ -2,6 +2,9 @@ import React from 'react'
 import styled from 'styled-components'
 import { DivContainer } from '../../styles/styles'
 import habourImg from '../../assets/habour-img.jpg'
+import wareHouseImg from '../../assets/icons/forklift.svg'
+import rescheduleImg from '../../assets/icons/road-map.svg'
+import customerImg from '../../assets/icons/female-services-support.svg'
 
 
 const MeritSection = styled.section`
@@ -26,14 +29,29 @@ const MeritSection = styled.section`
     article {
       margin-bottom: 3.4rem;
       display: flex;
-      align-items: center;
       gap: 1rem;
+      align-items: center;
+      position: relative;
 
+      @media (max-width: 330px) {
+        margin-bottom: 6rem;
+      }
+      
       .icon {
-        width: 7rem;
-        height: 3rem;
-        border: 2px solid green;
+        background-color: ${({theme}) => theme.text_orange};
+        border-radius: 50%;
 
+        img {
+        width: 30px;
+        height: 30px;
+        margin: .6rem;
+
+        @media (max-width: 330px) {
+          width: 20px;
+          height: 20px;
+          }
+        }
+        
       }
       h3 {
         margin-bottom: .6rem;
@@ -41,6 +59,12 @@ const MeritSection = styled.section`
       }
       p {
         font-size: .8rem;
+        @media (max-width: 330px) {
+          position: absolute;
+          width: 100%;
+          bottom: -4rem;
+          left: 0;
+        }
       }
     }
   }
@@ -53,21 +77,27 @@ const Advantages = () => {
         <div className="carousel">
           <h2>Our Advantages</h2>
           <article>
-            <div className='icon'></div>
+            <div className='icon'>
+              <img src={wareHouseImg} alt="" />
+            </div>
             <div className="article-text">
               <h3>Warehouse Facility</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!</p>
             </div>
           </article>
           <article>
-            <div className='icon'></div>
+            <div className='icon'>
+              <img src={customerImg} alt="" />
+            </div>
             <div className="article-text">
               <h3>Customer Satisfaction</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!</p>
             </div>
           </article>
           <article>
-            <div className='icon'></div>
+            <div className='icon'>
+              <img src={rescheduleImg} alt="" />
+            </div>
             <div className="article-text">
               <h3>Real-time Cargo Tracking</h3>
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!</p>

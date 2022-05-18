@@ -4,7 +4,6 @@ import { DivContainer } from '../../styles/styles'
 
 
 const ReviewSection = styled.section`
-  border: 2px solid black;
   padding-bottom: 5rem; 
 
   .banner-img {
@@ -34,8 +33,15 @@ const ReviewSection = styled.section`
 `
 
 const ReviewContainer = styled(DivContainer)`
-  margin-top: -12rem;
-  // z-index: -1;
+
+
+  h3 {
+    margin: 2.5rem auto 3rem;
+    text-align: center;
+    font-size: ${({theme}) => theme.text_h2};
+    color: ${({theme}) => theme.text_darkBlue};
+  }
+
   .carousel {
     display: flex;
     align-items: center;
@@ -93,10 +99,8 @@ const ReviewContainer = styled(DivContainer)`
 const ClientReview = () => {
   return (
     <ReviewSection>
-      <div className="banner-img">
-        <h2>Client Review</h2>
-      </div>
       <ReviewContainer>
+        <h3>Client Review</h3>
         <div className="carousel">
           <div className="carousel-item">
             <div className="ques-icon"></div>

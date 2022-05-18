@@ -16,6 +16,7 @@ const SmartSection = styled.section`
   background-repeat: no-repeat;
   position: relative;
   z-index: -2;
+  border-bottom: 3px solid #fff;
 
   h2 {
     color: #fff;

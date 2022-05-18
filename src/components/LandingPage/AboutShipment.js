@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { DivContainer } from '../../styles/styles';
-import containerImg from '../../assets/icons/cargo-container-crane.svg'
-import shipmentImg  from '../../assets/icons/cruise.svg'
-import mapImg  from '../../assets/map-mercator.svg'
+import containerImg from '../../assets/icons/cargo-container-crane.svg';
+import shipmentImg from '../../assets/icons/cruise.svg';
+import mapImg from '../../assets/map-mercator.svg';
 
 const AboutLogistics = styled.section`
   padding: 4rem 0;
-  color: ${({theme}) => theme.text_darkBlue};
+  color: ${({ theme }) => theme.text_darkBlue};
   background-image: url(${mapImg});
   background-cover: cover;
   background-position: center;
@@ -17,15 +17,15 @@ const AboutLogistics = styled.section`
   // z-index: -2;
 
   h5 {
-    font-size: ${({theme}) => theme.text_h5};
-    color: ${({theme}) => theme.text_orange};
+    font-size: ${({ theme }) => theme.text_h5};
+    color: ${({ theme }) => theme.text_orange};
     margin-bottom: .4rem;
   }
   h3 {
-    font-size: ${({theme}) => theme.text_h2};
+    font-size: ${({ theme }) => theme.text_h2};
     max-width: 22rem;
     width: 100%;
-    color: ${({theme}) => theme.text_darkBlue};
+    color: ${({ theme }) => theme.text_darkBlue};
     margin: 0rem auto 0.8rem;
   }
 
@@ -34,7 +34,7 @@ const AboutLogistics = styled.section`
     max-width: 30rem;
     width: 100%
     color: #306587;
-    font-size: ${({theme}) => theme.text_p1};
+    font-size: ${({ theme }) => theme.text_p1};
     text-align: justify;
 
   }
@@ -42,8 +42,7 @@ const AboutLogistics = styled.section`
     padding: 0.5rem 2.5rem;
     margin-top: 2rem;
     display: flex;
-    gap: 2rem;
-    
+    gap: 2rem;    
     
     article {
       margin-top: 1rem;
@@ -60,7 +59,7 @@ const AboutLogistics = styled.section`
     }
     h4 {
       margin-top: 1rem;
-      color: ${({theme}) => theme.text_darkBlue};
+      color: ${({ theme }) => theme.text_darkBlue};
       font-weight: bold;
     }
     p {
@@ -68,11 +67,11 @@ const AboutLogistics = styled.section`
       margin: 0;
       text-align: center;
       margin: 1.2rem 0;
-      font-size: ${({theme}) => theme.text_p1};
+      font-size: ${({ theme }) => theme.text_p1};
     }
     a {
       text-decoration: none;
-      color: ${({theme}) => theme.text_orange};
+      color: ${({ theme }) => theme.text_orange};
       font-size: 0.8rem;
       font-weight: bold;
     }
@@ -100,7 +99,7 @@ const AboutShipment = () => {
         <div className='about-carousel'>
           <article>
             <div className='icon'>
-              <img src={containerImg} alt="logo"  />
+              <img src={containerImg} alt='logo' />
             </div>
             <h4>Secured Containers</h4>
             <p>
@@ -112,7 +111,7 @@ const AboutShipment = () => {
           </article>
           <article>
             <div className='icon'>
-              <img src={shipmentImg} alt="" />
+              <img src={shipmentImg} alt='' />
             </div>
             <h4>Modern Vessels</h4>
             <p>
@@ -124,7 +123,7 @@ const AboutShipment = () => {
           </article>
         </div>
       </DivContainer>
-        <div className="dots"></div>
+      <div className='dots'></div>
     </AboutLogistics>
   );
 };

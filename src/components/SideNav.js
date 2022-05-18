@@ -9,13 +9,13 @@ const SideNavBar = styled.section`
   top: 0;
   left: 0;
   transition: background-color ease-in 0.8s;
-  
+
   ${({ toggleNav }) =>
     toggleNav &&
     css`
       background-color: ${({ theme }) => theme.dark_overlay};
       z-index: 5;
-      `}
+    `}
 
   nav {
     max-width: 20rem;
@@ -40,26 +40,24 @@ const SideNavBar = styled.section`
       justify-content: space-between;
       flex-direction: column;
       margin-top: 25%;
-      border-top: 2px solid ${({theme}) => theme.text_white};   
+      border-top: 2px solid ${({ theme }) => theme.text_white};
 
-      
       li {
         list-style: none;
         padding: 1rem;
-        border-bottom: 2px solid ${({theme}) => theme.text_white};
+        border-bottom: 2px solid ${({ theme }) => theme.text_white};
         border-top: none;
         width: 100%;
         text-align: center;
         cursor: pointer;
 
         &:hover a {
-          color: ${({theme}) => theme.text_orange};
+          color: ${({ theme }) => theme.text_orange};
         }
         &:hover {
           background-color: rgb(3, 24, 45);
         }
       }
-
     }
     .nav-logo {
       margin: 3rem auto 0;
@@ -68,19 +66,20 @@ const SideNavBar = styled.section`
       text-decoration: none;
       color: ${({ theme }) => theme.text_grey};
     }
-    
   }
 `;
 
 const SideNavBtn = styled(Btn)`
   margin: auto;
-`
+`;
 
 const SideNav = ({ toggleNav }) => {
   return (
     <SideNavBar toggleNav={toggleNav}>
       <nav>
-        <a href='#' className='nav-logo'>logo</a>
+        <a href='#' className='nav-logo'>
+          logo
+        </a>
 
         <ul>
           <li>

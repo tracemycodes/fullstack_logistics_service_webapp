@@ -4,7 +4,6 @@ import { DivContainer } from '../../styles/styles';
 
 const FooterSection = styled.section`
   .brand-logo {
-    border: 2px solid blue;
     background-color: #E6E6E6;
   }
   .footer-body {
