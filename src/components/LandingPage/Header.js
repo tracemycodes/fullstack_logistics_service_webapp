@@ -5,8 +5,6 @@ import SideNav from '../SideNav';
 
 const MainNav = styled.header`
   width: 100%;
-  border: 2px solid yellow;
-  overflow: hidden;
 `;
 
 const NavBar = styled.header`

@@ -63,7 +63,7 @@ const TrackBtn = styled(Btn)`
 `;
 
 const TrackSection = styled(DivContainer)`
-  margin-top: -4rem;
+  margin-top: -3.77rem;
   z-index: -1;
   position: relative;
   padding-bottom: 3.6rem;
@@ -78,14 +78,17 @@ const TrackSection = styled(DivContainer)`
     justify-content: center;
     border-top-right-radius: 0.8rem;
     border-top-left-radius: 0.8rem;
+    box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.1);
+    border-bottom: none;
     margin: auto;
     color: ${({theme}) => theme.text_darkBlue};
   }
 
   form {
-    border: 2px solid blue;
+    box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.1);
     border-bottom-right-radius: 0.8rem;
     border-bottom-left-radius: 0.8rem;
+    border-top: none;
     background-color: ${({theme}) => theme.text_light};
     color: ${({theme}) => theme.text_darkBlue};
     padding: 1.25rem;
@@ -165,6 +168,7 @@ const TrackSection = styled(DivContainer)`
     border-radius: unset;
     margin: unset;
     padding: unset;
+    box-shadow: unset;
     
     > div {
       position: relative;
@@ -172,6 +176,7 @@ const TrackSection = styled(DivContainer)`
       width: unset;
       margin: unset;
       padding: unset;
+      box-shadow: unset;
       display: flex;
 
       img {
@@ -199,6 +204,7 @@ const TrackSection = styled(DivContainer)`
         display: block;
         width: 100%;
         border-radius: unset;
+        box-shadow: unset;
         p {
           font-size: clamp(0.45rem, 3vw, 0.75rem);
         }

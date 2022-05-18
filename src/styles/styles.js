@@ -11,6 +11,7 @@ export const DivContainer = styled.div`
 export const Btn = styled.button`
   padding: .65rem 1.6rem;
   font-size: clamp(0.45rem, 2vw, 0.65rem);
+    box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.1);
   background-color: #EC0101;
   color: #fff;
   border: none;

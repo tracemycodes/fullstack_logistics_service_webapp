@@ -12,7 +12,6 @@ const Section = styled.section`
   padding: 4rem 0rem;
    background-color: #F8F9FB;
   // background-color: ${({theme}) => theme.text_ashGrey};
-  // border: 2px solid green;
   overflow: hidden;
 
   h3 {
@@ -81,6 +80,9 @@ const Section = styled.section`
       background-color: ${({theme}) => theme.text_light};
       border-bottom-left-radius: .8rem;
       border-bottom-right-radius: .8rem;
+      box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+      position: relative;
     }
     h4 {
       margin: 0.8rem 1.3rem 0rem;
