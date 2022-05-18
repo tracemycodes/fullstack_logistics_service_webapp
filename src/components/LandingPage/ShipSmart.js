@@ -21,17 +21,21 @@ const SmartSection = styled.section`
   h2 {
     color: #fff;
     position: absolute;
-    font-size: 1.5rem;
+    font-size: ${({theme}) => theme.text_h2};
     top: 2rem;
   }
 
   p {
     color: #e1e1e1;
     position: absolute;
-    font-size: .9rem;
+    font-size: ${({theme}) => theme.text_p1};
     top: 5rem;
-    max-width: 67%;
-    width: 30rem;
+    max-width: 30rem;
+    width: 67%;
+
+    @media (max-width: 420px) {
+      top: 4rem;
+    }
   }
   
   &:before {

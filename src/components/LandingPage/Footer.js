@@ -12,7 +12,6 @@ const FooterSection = styled.section`
   .footer-terms {
     background-color: #03182d;
     width: 100%;
-    border: 2px solid yellow;
   }
 `;
 const LogoDiv = styled(DivContainer)`
@@ -32,24 +31,35 @@ const FooterDiv = styled(DivContainer)`
   display: flex;
   align-item: center;
   padding: 2.4rem 0;
-  
+  position: relative;
+    
+  @media (max-width: 550px) {
+    padding-bottom: 3.9rem;
+    justify-content: space-between;
+  }
+
   h3 {
     color: #fff;
     margin: 1.5rem 0 1.5rem;
+    font-size: ${({theme}) => theme.text_p1}
   }
   a {
     text-decoration: none;
     margin-bottom: 1.1rem;
     display: block;
-    font-size: .75rem;
+    font-size: clamp(.5rem, 3vw, .75rem);
     color: #E6E6E6;
   }
   > * + * {
-    margin-left: 4rem;
-   
+    margin-left: 4rem;      
   }
   .social-contact {
     margin-left: auto;
+    @media (max-width: 550px) {
+      display: block;
+      position: absolute;
+      bottom: 1rem;
+    }
   }
 `;
 
@@ -58,7 +68,7 @@ const FooterTerms = styled(DivContainer)`
   align-item: center;
   padding: 2.4rem 0;
   color: #E6E6E6;
-  font-size: .8rem;
+  font-size: clamp(.5rem, 3vw, .75rem);
 
   > * + * {
     margin-left: 2rem;

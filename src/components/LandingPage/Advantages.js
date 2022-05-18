@@ -21,9 +21,17 @@ const MeritSection = styled.section`
     height: 100%;
     color: #f8f9fb;
 
+    @media (max-width: 350px) {
+      padding: 0 1.5rem 1rem;
+    }
+
     h2 {
-      font-size: 1.8rem;
+      font-size: ${({theme}) => theme.text_h1};
       margin: 3.5rem 0;
+      @media (max-width: 310px) {
+        font-size: 1.3rem;
+        margin: 2rem 0;
+      }
     }
 
     article {
@@ -35,6 +43,7 @@ const MeritSection = styled.section`
 
       @media (max-width: 330px) {
         margin-bottom: 6rem;
+        gap: .5rem;
       }
       
       .icon {
@@ -44,6 +53,7 @@ const MeritSection = styled.section`
         img {
         width: 30px;
         height: 30px;
+        filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(207deg) brightness(102%) contrast(102%);
         margin: .6rem;
 
         @media (max-width: 330px) {

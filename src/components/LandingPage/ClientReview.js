@@ -24,8 +24,8 @@ const ReviewSection = styled.section`
     }
     h2 {
       margin-top: 4rem;
-      font-size: 1.75rem;      
-      color: rgb(0, 39, 65);
+      font-size: ${({theme}) => theme.text_h2};      
+      color: ${({theme}) => theme.text_darkBlue};   
     }
 
   }
@@ -46,16 +46,16 @@ const ReviewContainer = styled(DivContainer)`
     display: flex;
     align-items: center;
     justify-content: space-between;
-
+    
     .carousel-item {
       border: 2px solid orange;
       padding: 1.5rem;
       width: 21rem;
-      font-size: .9rem;
+      font-size: ${({theme}) => theme.text_h3};
       background-color: #fff;
       border-radius: .3rem;
       position: relative;
-      color: rgb(0, 39, 65);
+      color: ${({theme}) => theme.text_darkBlue};
       z-index: -1;
 
       .ques-icon {
@@ -85,11 +85,12 @@ const ReviewContainer = styled(DivContainer)`
           margin-right: 1rem;
         }
         h4 {
-          font-size: 1rem;
+          font-size: ${({theme}) => theme.text_h3};
           margin-bottom: .16rem;
         }
         p {
-          font-size: .8rem;
+          font-size: ${({theme}) => theme.text_p1};
+      color: ${({theme}) => theme.text_darkBlue};
         }
       }
     }
