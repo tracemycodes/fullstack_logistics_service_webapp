@@ -44,7 +44,7 @@ const SmartSection = styled.section`
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 39, 65, 0.8);
+    background-color: ${({theme}) => theme.text_blue_overlay};
     position: absolute;
     z-index: 0;
 
@@ -57,7 +57,7 @@ const SmartSection = styled.section`
   }
 
   .map-div {
-    height: 29rem;
+    height: 33rem;
     margin: 2rem auto 4rem;
 
     img {
@@ -109,6 +109,9 @@ const ShipSmart = () => {
     <SmartSection>
       <div className='overlay-img'>
         <DivContainer>
+          <section>
+            
+          </section>
           <h2>Ship Smart with Transtics</h2>
           <p>
             Solving your supply chain needs from end to end, taking the
