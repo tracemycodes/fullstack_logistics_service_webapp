@@ -27,7 +27,7 @@ export const LightTheme = {
   text_ashGrey: '#e8ebf2',
   text_orange: 'rgb(236, 1, 1)',
   text_darkBlue: 'rgb(0, 39, 65)',
-  text_blue_overlay: 'rgb(0, 39, 65, 0.8)',
+  text_blue_overlay: 'rgb(0, 39, 65, 0.9)',
   dark_overlay: 'rgb(0, 0, 0, 0.5)',
   text_h1: 'clamp(1.5rem, 7vw, 2.8rem)',
   text_h2: 'clamp(1rem, 6.5vw, 1.8rem)',
