@@ -2,11 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 import { Btn, DivContainer } from '../../styles/styles';
 import globeImg from '../../assets/31226.jpg'
+import connectImg from '../../assets/hand-button.jpg'
+import travelImg from '../../assets/icons/travel.svg'
+import companyImg from '../../assets/icons/check-company.svg'
+import portImg from '../../assets/icons/crane.svg'
+
 
 
 const TrackShipSection = styled.section`
   width: 100%;
-  border: 2px solid purple;
   overflow: hidden;
 `;
 
@@ -14,6 +18,9 @@ const Banner = styled.div`
   height: 14.5rem;
   width: 100%;
   border: 1px solid ${({theme}) => theme.text_blue_overlay};
+  background-image: url(${connectImg});
+  background-size: cover;
+  background-position: center;
   position: relative;
   z-index: -1;
   &:after {
@@ -30,6 +37,8 @@ const Banner = styled.div`
     width: 30rem;
     font-size: ${({theme}) => theme.text_h2};
     margin: 3.5rem 0;
+    position: relative;
+    z-index: 1;
   }
   
 `;
@@ -108,6 +117,17 @@ const TrackSection = styled(DivContainer)`
     gap: 4rem;
     margin: 4.5rem 0;
 
+    
+    @media (max-width: 898px) {
+      display: block;  
+      
+      .article-img {
+        max-width: 30rem;
+        width: 75%;
+        margin: 0 auto 2rem;
+      }
+    }
+
     article {
       img {
         width: 100%;
@@ -129,6 +149,13 @@ const TrackSection = styled(DivContainer)`
         font-size: ${({theme}) => theme.text_p1};
         margin-bottom: 1.5rem;
       }
+      @media (max-width: 898px) {
+      padding: unset;
+      max-width: 36rem;
+      width: 100%;
+      margin: auto;
+      text-align: center;
+      }
     }
   }
   .statistics {
@@ -138,25 +165,72 @@ const TrackSection = styled(DivContainer)`
     border-radius: unset;
     margin: unset;
     padding: unset;
-
+    
     > div {
+      position: relative;
       border-radius: unset;
       width: unset;
       margin: unset;
       padding: unset;
+      display: flex;
+
+      img {
+        width: 3.5rem;
+        filter: ${({theme}) => theme.icon_filter};
+        margin-right: .5rem;
+
+        @media (max-width: 726px) {
+          width: 3rem;
+          height: 3rem;
+        }
+        @media (max-width: 486px) {
+          width: 1.7rem;
+          height: 1.7rem;
+        }
+        @media (max-width: 300px) {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+
       .count {
         margin: unset;
         padding: unset;
         display: block;
         width: 100%;
         border-radius: unset;
-        border: 2px solid red;
         p {
-          font-size: clamp(0.35rem, 2.5vw, 0.75rem);
+          font-size: clamp(0.45rem, 3vw, 0.75rem);
         }
         .count-num {
-          font-size: clamp(2rem, 3vw, 3rem);
+          font-size: clamp(2rem, 2.5vw, 3rem);
           text-align: center;
+
+          @media (max-width: 486px) {
+            font-size: 1.7rem;
+          }
+          @media (max-width: 300px) {
+          font-size: 1rem;
+         }
+
+        }
+        .count-text {
+          
+          @media (max-width: 726px) {
+          display: block;
+          position: absolute;
+          width: 300%;
+          bottom: -1.75rem; 
+          left: 0;
+        }
+         @media (max-width: 486px) {
+           left: 0;
+           bottom: -1.45rem; 
+           font-size: 0.6rem;
+         }
+         @media (max-width: 300px) {
+          font-size: .46rem;
+         }
         }
       }
     }
@@ -181,7 +255,7 @@ const TrackShipment = () => {
           <TrackBtn type='submit'>Track Shipment</TrackBtn>
         </form>
         <section>
-          <article>
+          <article className='article-img'>
             <img src={globeImg} alt="" />
           </article>
           <article className='article-text'>
@@ -200,21 +274,24 @@ const TrackShipment = () => {
         </section>
         <div className='statistics'>
           <div>
+            <img src={companyImg} alt="" />
             <div className='count'>
               <p className='count-num'>217</p>
-              <p>PORTS SERVED</p>
+              <p className='count-text'>COMPANY ESTABLISHED</p>
             </div>
           </div>
           <div>
+            <img src={travelImg} alt="" />
             <div className='count'>
               <p className='count-num'>217</p>
-              <p>PORTS SERVED</p>
+              <p className='count-text'>C0UNTRIES SERVED</p>
             </div>
           </div>
           <div>
+            <img src={portImg} alt="" />
             <div className='count'>
               <p className='count-num'>217</p>
-              <p>PORTS SERVED</p>
+              <p className='count-text'>PORTS SERVED</p>
             </div>
           </div>
         </div>

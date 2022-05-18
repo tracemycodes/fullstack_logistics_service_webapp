@@ -1,12 +1,18 @@
 import React from 'react';
 import styled from 'styled-components';
 import { DivContainer } from '../../styles/styles';
+import truckImg from '../../assets/truck-img.jpg'
+import shipImg from '../../assets/ship-cargo.jpg'
+import airplaneImg from '../../assets/plane-flying.jpg'
+import businessImg from '../../assets/icons/movers.svg'
+import eventImg from '../../assets/icons/reschedule-date.svg'
+import militaryImg from '../../assets/icons/truck-loading.svg'
 
 const Section = styled.section`
   padding: 4rem 0rem;
-  //  background-color: #F8F9FB;
-  background-color: ${({theme}) => theme.text_ashGrey};
-  border: 2px solid green;
+   background-color: #F8F9FB;
+  // background-color: ${({theme}) => theme.text_ashGrey};
+  // border: 2px solid green;
   overflow: hidden;
 
   h3 {
@@ -40,11 +46,22 @@ const Section = styled.section`
       margin: 0 0.1rem;
       color: ${({theme}) => theme.text_darkBlue};
       font-weight: 600;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 3;
 
-      &:hover {
+      :hover {
         background-color: ${({theme}) => theme.text_darkBlue};
         color: ${({theme}) => theme.text_light};
       }
+    }
+
+    img {
+      width: 1.4rem;
+      height: 1.4rem;
+      margin-right: .3rem;
+      filter: ${({theme}) => theme.icon_filter};
     }
     .btn-left {
       border-top-left-radius: 0.85rem;
@@ -62,7 +79,6 @@ const Section = styled.section`
       margin-top: 1rem;
       color: ${({theme}) => theme.text_darkBlue};
       background-color: ${({theme}) => theme.text_light};
-      border: 2px solid green;
       border-bottom-left-radius: .8rem;
       border-bottom-right-radius: .8rem;
     }
@@ -82,8 +98,8 @@ const Section = styled.section`
     }
     .card-img {
       height: 12rem;
-      padding: 0.1rem;
       position: relative;
+      z-index: 3;
 
       &:after {
         content: ' ';
@@ -93,9 +109,14 @@ const Section = styled.section`
         height: 100%;
         width: 100%;
       }
-      :hover:after {
+      &:hover:after {
         background-color: ${({theme}) => theme.text_blue_overlay};
       }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }      
     }
   }
   .pagination {
@@ -116,13 +137,24 @@ const LogisticsService = () => {
       </p>
       <DivContainer>
         <div className='tab-group'>
-          <button className='btn-left'>Business Logistics</button>
-          <button className='btn'>Military Logistics</button>
-          <button className='btn-right'>Event Logistics</button>
+          <button className='btn-left'>
+            <img src={businessImg} alt="" />
+            Business Logistics
+          </button>
+          <button className='btn'>
+            <img src={militaryImg} alt="" />
+            Military Logistics
+          </button>
+          <button className='btn-right'>
+            <img src={eventImg} alt="" />
+            Event Logistics
+          </button>
         </div>
         <section className='logistics-carousel'>
           <div className='card'>
-            <div className='card-img'></div>
+            <div className='card-img'>
+              <img src={truckImg} alt="" />
+            </div>
             <h4>
               {' '}
               <span className='card-num'>01.</span> <strong>Truck </strong>{' '}
@@ -133,7 +165,9 @@ const LogisticsService = () => {
             </p>
           </div>
           <div className='card'>
-            <div className='card-img'></div>
+            <div className='card-img'>
+              <img src={shipImg} alt="" />
+            </div>
             <h4>
               {' '}
               <span className='card-num'>01.</span> <strong>Truck </strong>{' '}
@@ -144,7 +178,9 @@ const LogisticsService = () => {
             </p>
           </div>
           <div className='card'>
-            <div className='card-img'></div>
+            <div className='card-img'>
+              <img src={airplaneImg} alt="" />
+            </div>
             <h4>
               {' '}
               <span className='card-num'>01.</span> <strong>Truck </strong>{' '}

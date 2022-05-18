@@ -8,6 +8,7 @@ const SideNavBar = styled.section`
   height: 100%;
   top: 0;
   left: 0;
+  z-index: 5;
   transition: background-color ease-in 0.8s;
 
   ${({ toggleNav }) =>
@@ -25,7 +26,6 @@ const SideNavBar = styled.section`
     transition: transform ease-in 0.8s;
     display: flex;
     flex-direction: column;
-    z.index: 444;
 
     ${({ toggleNav }) =>
       toggleNav &&

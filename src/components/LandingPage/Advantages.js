@@ -1,16 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import { DivContainer } from '../../styles/styles'
+import habourImg from '../../assets/habour-img.jpg'
 
 
 const MeritSection = styled.section`
-  border: 2px solid green;
+  background-image: url(${habourImg});
+  background-size: cover;
+  background-position: center;
+  
   .carousel {
-    background-color: rgb(0, 39, 65, 0.8);
+    border: 1px solid rgb(0, 39, 65, 0.95);
+    background-color: rgb(0, 39, 65, 0.95);
     padding: 0 2.4rem 1rem;
     max-width: 29rem;
     width: 100%;
-    border: 1px solid blue;
+    height: 100%;
     color: #f8f9fb;
 
     h2 {

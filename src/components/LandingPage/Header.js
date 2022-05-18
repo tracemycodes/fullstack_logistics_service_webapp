@@ -54,7 +54,7 @@ const NavBody = styled(DivContainer)`
   .nav-hamburger {
     display: none;
     flex-direction: column;
-    z-index: 5;
+    z-index: 7;
     div {
       border: 2px solid black;
       width: 2rem;

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import myimg from '../../assets/myimg.jpg';
+import myimg from '../../assets/singapore-crane-shipping-cargo.jpg';
 import { DivContainer } from '../../styles/styles';
 import mapImg from '../../assets/11045.jpg'
 
@@ -8,8 +8,6 @@ const SmartSection = styled.section`
   width: 100%;
   position: relative;
   z-index: -1;
-  border: 2px solid yellow;
-
 
   .overlay-img{
   height: 24rem;

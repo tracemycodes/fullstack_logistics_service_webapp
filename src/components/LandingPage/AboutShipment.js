@@ -14,6 +14,7 @@ const AboutLogistics = styled.section`
   text-align: center;
   width: 100%;
   overflow: hidden;
+  // z-index: -2;
 
   h5 {
     font-size: ${({theme}) => theme.text_h5};
@@ -42,17 +43,20 @@ const AboutLogistics = styled.section`
     margin-top: 2rem;
     display: flex;
     gap: 2rem;
-
+    
+    
     article {
       margin-top: 1rem;
-      img {
-        filter: brightness(0) saturate(100%) invert(27%) sepia(88%) saturate(7180%) hue-rotate(356deg) brightness(87%) contrast(114%);
-      }
     }
     .icon {
       width: 3.3rem;
       margin: auto;
       height: 3.3rem;
+
+      img {
+        position: relative;
+        filter: brightness(0) saturate(100%) invert(27%) sepia(88%) saturate(7180%) hue-rotate(356deg) brightness(87%) contrast(114%);
+      }
     }
     h4 {
       margin-top: 1rem;
