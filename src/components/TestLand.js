@@ -2,35 +2,24 @@ import React, { useRef, useState } from 'react'
 
 
 
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from 'swiper/react';
-
-
-// // Import Swiper styles
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-
-// // Import Swiper and modules
-// import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper';
-
 // Style component
 import styled from 'styled-components'
-import { Btn, DivContainer } from '../../styles/styles'
-import landingImg2 from '../../assets/industrial-port-container-yard.jpg'
+import { Btn, DivContainer } from '../styles/styles'
+import landingImg2 from '../assets/industrial-port-container-yard.jpg'
 
 
 
 
 const CarouselDiv = styled.section`
   padding: 9.5rem 0rem 14.5rem;
-  position: relative;
-  background-image: url(${landingImg2});
-  background-size: cover;
-  background-position: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid green;
+  top: 0;
+  left: 0;
   font-family: Arial, Helvetica, sans-serif;
-  z-index: -1;
-  height: 100vh;
+  z-index: 1;
   
   &:after {
     content: " ";
@@ -45,7 +34,7 @@ const CarouselDiv = styled.section`
   h1 {
     font-size: ${({theme}) => theme.text_h1};
     line-height: ${({theme}) => theme.lineHeight_h1};
-    color: ${({theme}) => theme.text_white};
+    color: black;
     position: relative;
     max-width: 30rem;
     width: 100%;
@@ -62,7 +51,8 @@ const CarouselDiv = styled.section`
 `
 
 
-const LandingPage = () => {
+
+const TestLand = () => {
   return (
     <CarouselDiv>      
       <DivContainer>        
@@ -74,4 +64,5 @@ const LandingPage = () => {
   )
 }
 
-export default LandingPage
+export default TestLand
+
