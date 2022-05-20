@@ -8,7 +8,6 @@ import LandingPage from './components/LandingPage/LandingPage';
 import LogisticsService from './components/LandingPage/LogisticsService';
 import ShipSmart from './components/LandingPage/ShipSmart';
 import TrackShipment from './components/LandingPage/TrackShipment';
-import Test from './components/Test';
 import { LightTheme } from './theme/globalStyle';
 
 
@@ -17,7 +16,6 @@ function App() {
     <div className='App'>
       <ThemeProvider theme={LightTheme}>
         <Header />
-        <Test/>
         <LandingPage />
         <AboutShipment />
         <LogisticsService />

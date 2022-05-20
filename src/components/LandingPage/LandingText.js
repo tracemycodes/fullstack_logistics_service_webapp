@@ -4,8 +4,7 @@ import React, { useRef, useState } from 'react'
 
 // Style component
 import styled from 'styled-components'
-import { Btn, DivContainer } from '../styles/styles'
-import landingImg2 from '../assets/industrial-port-container-yard.jpg'
+import { Btn, DivContainer } from '../../styles/styles'
 
 
 
@@ -15,7 +14,6 @@ const CarouselDiv = styled.section`
   position: absolute;
   width: 100%;
   height: 100%;
-  border: 2px solid green;
   top: 0;
   left: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -52,7 +50,7 @@ const CarouselDiv = styled.section`
 
 
 
-const TestLand = () => {
+const LandingText = () => {
   return (
     <CarouselDiv>      
       <DivContainer>        
@@ -64,5 +62,4 @@ const TestLand = () => {
   )
 }
 
-export default TestLand
-
+export default LandingText
