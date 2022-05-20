@@ -1,6 +1,14 @@
 import React from 'react'
 import styled from "styled-components"
 import landingImg2 from '../assets/industrial-port-container-yard.jpg'
+import landingImg3 from '../assets/ship-container-harbor.jpg'
+import landingImg4 from '../assets/terminal-landing.jpg'
+import landingImg5 from '../assets/port-landing.jpg'
+import landingImg6 from '../assets/pexels-landing.jpg'
+import landingImg7 from '../assets/factory-worker-landing.jpg'
+import landingImg8 from '../assets/beautiful-view-construction-landing.jpg'
+import landingImg9 from '../assets/arial-port-landing.jpg'
+import landingImg10 from '../assets/aerial-landing.jpg'
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -27,24 +35,28 @@ const Test = () => {
   return (
     <TestDiv>
       <Swiper
-      spaceBetween={50}
+      modules={[Autoplay, EffectFade]}
       slidesPerView={1}
-      navigation
+      speed={3000}
       effect={'fade'} 
       fadeEffect= {{crossFade: true}} 
-      modules={[Pagination, Navigation, Autoplay, EffectFade]}
-      pagination={{clickable: true}}
-      autoplay={{delay: 5000}}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      autoplay={{
+        delay: 3000,
+      }}
     >
       <SwiperSlide>
         <img src={landingImg2} alt="" />
       </SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
-      <SwiperSlide>Slide 5</SwiperSlide>
+      <SwiperSlide>
+        <img src={landingImg3} alt="" />
+ 
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={landingImg7} alt="" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src={landingImg10} alt="" />
+      </SwiperSlide>
       <TestLand/>
     </Swiper>
     </TestDiv>

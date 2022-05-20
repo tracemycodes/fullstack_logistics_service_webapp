@@ -34,7 +34,7 @@ const CarouselDiv = styled.section`
   h1 {
     font-size: ${({theme}) => theme.text_h1};
     line-height: ${({theme}) => theme.lineHeight_h1};
-    color: black;
+    color: ${({theme}) => theme.text_white};
     position: relative;
     max-width: 30rem;
     width: 100%;
