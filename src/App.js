@@ -6,6 +6,7 @@ import Footer from './components/LandingPage/Footer';
 import Header from './components/LandingPage/Header';
 import LandingPage from './components/LandingPage/LandingPage';
 import LogisticsService from './components/LandingPage/LogisticsService';
+import RecentNews from './components/LandingPage/RecentNews';
 import ShipSmart from './components/LandingPage/ShipSmart';
 import TrackShipment from './components/LandingPage/TrackShipment';
 import { LightTheme } from './theme/globalStyle';
@@ -22,6 +23,7 @@ function App() {
         <TrackShipment />
         <ShipSmart />
         <Advantages />
+        <RecentNews/>
         <ClientReview />
         <Footer />
       </ThemeProvider>

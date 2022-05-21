@@ -17,7 +17,7 @@ import './styles.css';
 import { Navigation, Pagination } from 'swiper';
 
 const AboutLogistics = styled.section`
-  padding: 4rem 0;
+  padding: 6rem 0 7rem;
   color: ${({ theme }) => theme.text_darkBlue};
   background-image: url(${mapImg});
   background-cover: cover;
@@ -52,12 +52,11 @@ const AboutLogistics = styled.section`
   .about-carousel {
     padding: 0.5rem 2.5rem;
     margin-top: 2rem;
-    border: 2px solid red;
     display: flex;
     gap: 2rem;    
     
     article {
-      margin-top: 1rem;
+      margin: 1rem 0 3rem;
     }
     .icon {
       width: 3.3rem;
@@ -89,12 +88,6 @@ const AboutLogistics = styled.section`
     }
     
   }
-  .dots {
-      border: 2px solid green;
-      width: 4rem;
-      padding: .3rem;
-      margin: 1rem;
-    }
 `;
 
 const AboutShipment = () => {
@@ -108,11 +101,12 @@ const AboutShipment = () => {
           out of container shipping. We are at the forefront of developing
           innovation
         </p>
+        <div className='about-carousel'>
         <Swiper
           modules={[Navigation, Pagination]}
             spaceBetween={30}
             loop={true}
-            slidesPerView={3}
+            slidesPerView={2}
             speed={2000}
             pagination={{
               clickable: true,
@@ -147,25 +141,12 @@ const AboutShipment = () => {
             <a href='#'>Read More</a>
           </article>
           </SwiperSlide>
-        </Swiper>
-        <div className='about-carousel'>
-          <article>
-            <div className='icon'>
-              <img src={containerImg} alt='logo' />
-            </div>
-            <h4>Secured Containers</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
-              eius? Natus magni ab dignissimos officiis. Amet nam ad odio id
-              fugiat voluptatum?
-            </p>
-            <a href='#'>Read More</a>
-          </article>
-          <article>
+          <SwiperSlide>
+            <article>
             <div className='icon'>
               <img src={shipmentImg} alt='' />
             </div>
-            <h4>Modern Vessels</h4>
+            <h4>Packaged goods</h4>
             <p>
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
               eius? Natus magni ab dignissimos officiis. Amet nam ad odio id
@@ -173,9 +154,10 @@ const AboutShipment = () => {
             </p>
             <a href='#'>Read More</a>
           </article>
+          </SwiperSlide>
+        </Swiper>
         </div>
       </DivContainer>
-      <div className='dots'></div>
     </AboutLogistics>
   );
 };
