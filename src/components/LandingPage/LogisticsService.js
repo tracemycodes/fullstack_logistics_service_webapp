@@ -170,6 +170,7 @@ const LogisticsService = () => {
             spaceBetween={30}
             loop={true}
             slidesPerView={3}
+            // wrapperClass={'custom-wrap'}
             speed={2000}
             pagination={{
               clickable: true,
@@ -199,8 +200,8 @@ const LogisticsService = () => {
                 </div>
                 <h4>
                   {' '}
-                  <span className='card-num'>01.</span> <strong>Truck </strong>{' '}
-                  Delivery{' '}
+                  <span className='card-num'>01.</span> <strong>Ocean</strong>{' '}
+                  Shipping{' '}
                 </h4>
                 <p>
                   We offer a Global Logistics Network with our Worldwide
@@ -216,8 +217,8 @@ const LogisticsService = () => {
                 </div>
                 <h4>
                   {' '}
-                  <span className='card-num'>01.</span> <strong>Truck </strong>{' '}
-                  Delivery{' '}
+                  <span className='card-num'>01.</span> <strong>Air</strong>{' '}
+                  Freight{' '}
                 </h4>
                 <p>
                   We offer a Global Logistics Network with our Worldwide
@@ -232,7 +233,7 @@ const LogisticsService = () => {
                 </div>
                 <h4>
                   {' '}
-                  <span className='card-num'>01.</span> <strong>Truck </strong>{' '}
+                  <span className='card-num'>01.</span> <strong>Cargo</strong>{' '}
                   Delivery{' '}
                 </h4>
                 <p>
@@ -248,8 +249,8 @@ const LogisticsService = () => {
                 </div>
                 <h4>
                   {' '}
-                  <span className='card-num'>01.</span> <strong>Truck </strong>{' '}
-                  Delivery{' '}
+                  <span className='card-num'>01.</span> <strong>Storage</strong>{' '}
+                  Facilities{' '}
                 </h4>
                 <p>
                   We offer a Global Logistics Network with our Worldwide
@@ -265,8 +266,8 @@ const LogisticsService = () => {
                 </div>
                 <h4>
                   {' '}
-                  <span className='card-num'>01.</span> <strong>Truck </strong>{' '}
-                  Delivery{' '}
+                  <span className='card-num'>01.</span> <strong>Warehousing</strong>{' '}
+                  Facilities{' '}
                 </h4>
                 <p>
                   We offer a Global Logistics Network with our Worldwide

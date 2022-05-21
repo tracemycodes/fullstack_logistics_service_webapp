@@ -5,6 +5,17 @@ import containerImg from '../../assets/icons/cargo-container-crane.svg';
 import shipmentImg from '../../assets/icons/cruise.svg';
 import mapImg from '../../assets/map-mercator.svg';
 
+// swiper import
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/bundle';
+import './styles.css';
+
+// Import Swiper and modules
+import { Navigation, Pagination } from 'swiper';
+
 const AboutLogistics = styled.section`
   padding: 4rem 0;
   color: ${({ theme }) => theme.text_darkBlue};
@@ -41,6 +52,7 @@ const AboutLogistics = styled.section`
   .about-carousel {
     padding: 0.5rem 2.5rem;
     margin-top: 2rem;
+    border: 2px solid red;
     display: flex;
     gap: 2rem;    
     
@@ -96,6 +108,46 @@ const AboutShipment = () => {
           out of container shipping. We are at the forefront of developing
           innovation
         </p>
+        <Swiper
+          modules={[Navigation, Pagination]}
+            spaceBetween={30}
+            loop={true}
+            slidesPerView={3}
+            speed={2000}
+            pagination={{
+              clickable: true,
+            }}
+            navigation={true}
+        >
+          <SwiperSlide>
+            <article>
+            <div className='icon'>
+              <img src={containerImg} alt='logo' />
+            </div>
+            <h4>Secured Containers</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
+              eius? Natus magni ab dignissimos officiis. Amet nam ad odio id
+              fugiat voluptatum?
+            </p>
+            <a href='#'>Read More</a>
+          </article>
+          </SwiperSlide>
+          <SwiperSlide>
+            <article>
+            <div className='icon'>
+              <img src={shipmentImg} alt='' />
+            </div>
+            <h4>Modern Vessels</h4>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
+              eius? Natus magni ab dignissimos officiis. Amet nam ad odio id
+              fugiat voluptatum?
+            </p>
+            <a href='#'>Read More</a>
+          </article>
+          </SwiperSlide>
+        </Swiper>
         <div className='about-carousel'>
           <article>
             <div className='icon'>
