@@ -11,7 +11,6 @@ import landingImg4 from '../../assets/aerial-landing.jpg';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
-
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/bundle';
@@ -21,6 +20,7 @@ import './styles.css';
 import { Autoplay, EffectFade } from 'swiper';
 
 const SlideSection = styled.section`
+  height: calc(100vh - 6rem);
   width: 100%;
 `;
 
@@ -89,10 +89,10 @@ const LandingPage = () => {
           <img src={landingImg4} alt='' />
         </SwiperSlide>
         <CarouselDiv>
-        <DivContainer>
-          <h1>Shipping Products Worldwide</h1>
-          <p>with 100% Customer Satisfaction</p>
-          <Btn>CONTACT US</Btn>
+          <DivContainer>
+            <h1>Shipping Products Worldwide</h1>
+            <p>with 100% Customer Satisfaction</p>
+            <Btn>CONTACT US</Btn>
           </DivContainer>
         </CarouselDiv>
       </Swiper>

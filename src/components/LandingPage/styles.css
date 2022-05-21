@@ -18,15 +18,18 @@ body {
 
 .swiper {
   width: 100%;
-  height: calc(100vh - 6rem);
+  height: 100%;
   position: relative;
+  z-index: 0;
+  border: 2px solid green;
+  padding: 0 0 3rem;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
   background: #fff;
-
+  border: 2px solid purple;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -53,4 +56,22 @@ body {
 .swiper {
   margin-left: auto;
   margin-right: auto;
+}
+
+
+.swiper-button-next{
+  border: 2px solid red;
+  width: 3rem;
+  height: 3rem;
+  position: absolute;  
+}
+.swiper-button-prev{
+  border: 2px solid red;
+  width: 3rem;
+  height: 3rem;
+}
+
+.swiper-pagination-bullet {
+  border: 2px solid red;
+  margin-top: 5rem;
 }
