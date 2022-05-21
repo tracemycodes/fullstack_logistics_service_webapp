@@ -2,12 +2,17 @@ import React from 'react'
 import styled from 'styled-components'
 import { DivContainer } from '../../styles/styles'
 
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react';
 
-const CarouselSection = styled(DivContainer)`
-// overflow-y: hidden;
-margin: auto;
-border: 2px solid red;
-`
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/bundle';
+import './styles.css';
+
+// Import Swiper and modules
+import { Autoplay } from 'swiper';
+
 
 const NewsSection = styled.section`
   color: ${({theme}) => theme.text_darkBlue};
@@ -21,35 +26,17 @@ const NewsSection = styled.section`
     width: 100%;
     max-width: 35rem;
   }
-  .news-scroll {
-  overflow-x: scroll;
-  overflow-y: hidden;
-    z-index: 2;
-    position: relative;
-    height: 100%;
-    
-  }
-  .news-bar {
-    width: 788px;
-    border: 2px solid blue;
-    display: block;
-
-      // height: 19rem;
-    // display: flex;
-    // // gap: 2rem;
-    // align-items: center;
-    // justify-content: space-between;
-
-    > * + *{
-      margin-left: 1.2rem;
-    }
-
-    article {
+  
+  article {
       width: 15.5rem;
       height: 19rem;
       border: 2px solid green;
       text-align: left;
       display: inline-block;
+
+      @media (max-width: 765px) {
+        width: 18rem;
+      }
       .news-img {
         height: 10rem;
         border: 2px solid red;
@@ -72,38 +59,65 @@ const NewsSection = styled.section`
         margin: 2rem .5rem 1rem;
       }
     }
-  }
+  
 `
 
 const RecentNews = () => {
   return (
     <NewsSection>
-      <CarouselSection>
+      <DivContainer>
         <h2>Recent News</h2>
         <p>Solving your supply chain needs from end to end, taking the complexity out of container shipping We are the forefront of developing innovation.</p>
         
-        <div className="news-scroll">
-        <div className="news-bar">
-          <article>
-            <div className="news-img"></div>
-            <h3>Denso invests $10mn in india distribution</h3>
-            <p className="news-text">By HARRY MENEAR - Mar 16, 2021 - 9:00AM</p>
-          </article>
         
+        <Swiper
+          modules={[Autoplay]}
+          spaceBetween={10}
+          speed={2000}
+          autoplay={{
+          delay: 2000,
+        }}
+        breakpoints={{
+          // when window width is >= 320px
+          570: {
+            slidesPerView: 1,
+            spaceBetween: 20
+          },
+          // when window width i
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20
+          },
+          740: {
+            slidesPerView: 3,
+            spaceBetween: 20
+          }
+        }}
+        >
+          <SwiperSlide>
           <article>
             <div className="news-img"></div>
             <h3>Denso invests $10mn in india distribution</h3>
             <p className="news-text">By HARRY MENEAR - Mar 16, 2021 - 9:00AM</p>
           </article>
-       
+          </SwiperSlide>
+          <SwiperSlide>            
           <article>
             <div className="news-img"></div>
             <h3>Denso invests $10mn in india distribution</h3>
             <p className="news-text">By HARRY MENEAR - Mar 16, 2021 - 9:00AM</p>
           </article>
-        </div>
-        </div>
-      </CarouselSection>
+          </SwiperSlide>
+          <SwiperSlide>            
+          <article>
+            <div className="news-img"></div>
+            <h3>Denso invests $10mn in india distribution</h3>
+            <p className="news-text">By HARRY MENEAR - Mar 16, 2021 - 9:00AM</p>
+          </article>
+          </SwiperSlide>
+        </Swiper>
+      
+      </DivContainer>
     </NewsSection>
   )
 }
