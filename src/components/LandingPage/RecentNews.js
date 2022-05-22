@@ -45,6 +45,7 @@ const NewsSection = styled.section`
       h3{
         margin: 0 .5rem;
         position: relative;
+        font-size: ${({ theme }) => theme.text_h3};
         &:before {
           content: " ";
           position: absolute;
@@ -56,7 +57,10 @@ const NewsSection = styled.section`
         }
       }
       p {
-        margin: 2rem .5rem 1rem;
+        margin: 2rem .5rem 1rem;  
+        border: 2px solid red;      
+        width: unset;
+        font-size: ${({ theme }) => theme.text_p1};
       }
     }
   
