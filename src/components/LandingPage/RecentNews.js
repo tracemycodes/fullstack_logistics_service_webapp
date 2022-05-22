@@ -19,12 +19,14 @@ const NewsSection = styled.section`
   text-align: center;
   h2 {
     margin: 6rem 0 1rem;
+    font-size: ${({ theme }) => theme.text_h2};
   }
   p {
     margin: auto;
     margin-bottom: 2rem;
     width: 100%;
     max-width: 35rem;
+    font-size: ${({ theme }) => theme.text_p1};
   }
   
   article {
