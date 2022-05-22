@@ -102,60 +102,66 @@ const AboutShipment = () => {
           innovation
         </p>
         <div className='about-carousel'>
-        <Swiper
-          modules={[Navigation, Pagination]}
+          <Swiper
+            modules={[Navigation, Pagination]}
             spaceBetween={30}
             loop={true}
-            slidesPerView={2}
+            slidesPerView={1}
             speed={2000}
             pagination={{
               clickable: true,
             }}
             navigation={true}
-        >
-          <SwiperSlide>
-            <article>
-            <div className='icon'>
-              <img src={containerImg} alt='logo' />
-            </div>
-            <h4>Secured Containers</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
-              eius? Natus magni ab dignissimos officiis. Amet nam ad odio id
-              fugiat voluptatum?
-            </p>
-            <a href='#'>Read More</a>
-          </article>
-          </SwiperSlide>
-          <SwiperSlide>
-            <article>
-            <div className='icon'>
-              <img src={shipmentImg} alt='' />
-            </div>
-            <h4>Modern Vessels</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
-              eius? Natus magni ab dignissimos officiis. Amet nam ad odio id
-              fugiat voluptatum?
-            </p>
-            <a href='#'>Read More</a>
-          </article>
-          </SwiperSlide>
-          <SwiperSlide>
-            <article>
-            <div className='icon'>
-              <img src={shipmentImg} alt='' />
-            </div>
-            <h4>Packaged goods</h4>
-            <p>
-              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit,
-              eius? Natus magni ab dignissimos officiis. Amet nam ad odio id
-              fugiat voluptatum?
-            </p>
-            <a href='#'>Read More</a>
-          </article>
-          </SwiperSlide>
-        </Swiper>
+            breakpoints={{
+              740: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+            }}
+          >
+            <SwiperSlide>
+              <article>
+                <div className='icon'>
+                  <img src={containerImg} alt='logo' />
+                </div>
+                <h4>Secured Containers</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Velit, eius? Natus magni ab dignissimos officiis. Amet nam ad
+                  odio id fugiat voluptatum?
+                </p>
+                <a href='#'>Read More</a>
+              </article>
+            </SwiperSlide>
+            <SwiperSlide>
+              <article>
+                <div className='icon'>
+                  <img src={shipmentImg} alt='' />
+                </div>
+                <h4>Modern Vessels</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Velit, eius? Natus magni ab dignissimos officiis. Amet nam ad
+                  odio id fugiat voluptatum?
+                </p>
+                <a href='#'>Read More</a>
+              </article>
+            </SwiperSlide>
+            <SwiperSlide>
+              <article>
+                <div className='icon'>
+                  <img src={shipmentImg} alt='' />
+                </div>
+                <h4>Packaged goods</h4>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Velit, eius? Natus magni ab dignissimos officiis. Amet nam ad
+                  odio id fugiat voluptatum?
+                </p>
+                <a href='#'>Read More</a>
+              </article>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </DivContainer>
     </AboutLogistics>
