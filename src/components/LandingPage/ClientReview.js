@@ -51,13 +51,18 @@ const ReviewContainer = styled(DivContainer)`
     color: ${({ theme }) => theme.text_darkBlue};
   }
 
+  .my-slider{
+    padding: 3rem 0;
+  }
+
   .carousel-item {
     border: 2px solid orange;
-    padding: 1.5rem;
+    padding: 1rem;
     font-size: ${({ theme }) => theme.text_h3};
     background-color: #fff;
     border-radius: 0.3rem;
-    // position: relative;
+    position: relative;
+    text-align: left;
     color: ${({ theme }) => theme.text_darkBlue};
 
     .ques-icon {
@@ -107,8 +112,8 @@ const ClientReview = () => {
         <Swiper
           modules={[Autoplay, EffectFade, Pagination]}
           loop={true}
-          spaceBetween={20}
-          slidesPerView={3}
+          spaceBetween={40}
+          slidesPerView={2}
           speed={2000}
           pagination={{
             clickable: true,
@@ -116,6 +121,7 @@ const ClientReview = () => {
           autoplay={{
             delay: 2000,
           }}
+          className='my-slider'
         >
           <SwiperSlide>
             <div className='carousel-item'>
