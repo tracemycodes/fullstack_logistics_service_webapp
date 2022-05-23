@@ -56,12 +56,12 @@ body {
 
 .swiper-button-next {
   right: -0.2rem;
-  top: calc(50% - 1.5rem);
+  top: calc(50% - 1.7rem);
   filter: brightness(0) saturate(100%) invert(27%) sepia(88%) saturate(7180%) hue-rotate(356deg) brightness(87%) contrast(114%);
 }
 .swiper-button-prev {
   left: -0.2rem;
-  top: calc(50% - 1.5rem);
+  top: calc(50% - 1.7rem);
   filter: brightness(0) saturate(100%) invert(27%) sepia(88%) saturate(7180%) hue-rotate(356deg) brightness(87%) contrast(114%);
 }
 

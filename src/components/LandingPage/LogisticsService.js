@@ -80,22 +80,17 @@ const Section = styled.section`
       border-top-right-radius: 0.85rem;
     }
   }
-  .logistics-carousel {
-    display: flex;
-    align-items: center;
-    gap: 1.4rem;
 
-    .card {
-      margin: 1rem 0 4rem;
-      color: ${({ theme }) => theme.text_darkBlue};
-      background-color: ${({ theme }) => theme.text_light};
-      border-bottom-left-radius: 0.8rem;
-      border-bottom-right-radius: 0.8rem;
-      box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.1);
-      z-index: 2;
-      position: relative;
-      text-align: left;
-    }
+  .card {
+    margin: 1rem 0 4rem;
+    color: ${({ theme }) => theme.text_darkBlue};
+    background-color: ${({ theme }) => theme.text_light};
+    border-bottom-left-radius: 0.8rem;
+    border-bottom-right-radius: 0.8rem;
+    box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
+    text-align: left;
     h4 {
       margin: 1rem 1.3rem 0rem;
       font-size: ${({ theme }) => theme.text_h3};
@@ -105,40 +100,34 @@ const Section = styled.section`
       margin: 1.3rem;
       font-size: ${({ theme }) => theme.text_p1};
     }
-    .card-num {
-      color: ${({ theme }) => theme.text_orange};
-      font-weight: bold;
-      margin-right: 0.2rem;
-    }
-    .card-img {
-      height: 12rem;
-      position: relative;
-      z-index: 3;
+  }
+  .card-num {
+    color: ${({ theme }) => theme.text_orange};
+    font-weight: bold;
+    margin-right: 0.2rem;
+  }
+  .card-img {
+    height: 12rem;
+    position: relative;
+    z-index: 3;
 
-      &:after {
-        content: ' ';
-        position: absolute;
-        top: 0;
-        left: 0;
-        height: 100%;
-        width: 100%;
-      }
-      &:hover:after {
-        background-color: ${({ theme }) => theme.text_blue_overlay};
-      }
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
+    &:after {
+      content: ' ';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+    &:hover:after {
+      background-color: ${({ theme }) => theme.text_blue_overlay};
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
-  // .pagination {
-  //   border: 2px solid orange;
-  //   width: 3rem;
-  //   height: 0.4rem;
-  //   margin: 2.5rem auto 0.5rem;
-  // }
 `;
 
 const LogisticsService = () => {
@@ -164,120 +153,124 @@ const LogisticsService = () => {
             Event Logistics
           </button>
         </div>
-        <section className='logistics-carousel'>
-          <Swiper
-            modules={[Navigation, Pagination]}
-            spaceBetween={30}
-            loop={true}
-            slidesPerView={3}
-            // wrapperClass={'custom-wrap'}
-            speed={2000}
-            pagination={{
-              clickable: true,
-            }}
-            navigation={true}
-          >
-            <SwiperSlide>
-              <div className='card'>
-                <div className='card-img'>
-                  <img src={truckImg} alt='' />
-                </div>
-                <h4>
-                  {' '}
-                  <span className='card-num'>01.</span> <strong>Truck </strong>{' '}
-                  Delivery{' '}
-                </h4>
-                <p>
-                  We offer a Global Logistics Network with our Worldwide
-                  offices.
-                </p>
+        <Swiper
+          modules={[Navigation, Pagination]}
+          loop={true}
+          spaceBetween={30}
+          slidesPerView={3}
+          speed={2000}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          breakpoints={{
+            570: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            740: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
+        >
+          <SwiperSlide>
+            <div className='card'>
+              <div className='card-img'>
+                <img src={truckImg} alt='' />
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='card'>
-                <div className='card-img'>
-                  <img src={shipImg} alt='' />
-                </div>
-                <h4>
-                  {' '}
-                  <span className='card-num'>01.</span> <strong>Ocean</strong>{' '}
-                  Shipping{' '}
-                </h4>
-                <p>
-                  We offer a Global Logistics Network with our Worldwide
-                  offices.
-                </p>
+              <h4>
+                {' '}
+                <span className='card-num'>01.</span> <strong>Truck </strong>{' '}
+                Delivery{' '}
+              </h4>
+              <p>
+                We offer a Global Logistics Network with our Worldwide offices.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='card'>
+              <div className='card-img'>
+                <img src={shipImg} alt='' />
               </div>
-            </SwiperSlide>
+              <h4>
+                {' '}
+                <span className='card-num'>01.</span> <strong>Ocean</strong>{' '}
+                Shipping{' '}
+              </h4>
+              <p>
+                We offer a Global Logistics Network with our Worldwide offices.
+              </p>
+            </div>
+          </SwiperSlide>
 
-            <SwiperSlide>
-              <div className='card'>
-                <div className='card-img'>
-                  <img src={airplaneImg} alt='' />
-                </div>
-                <h4>
-                  {' '}
-                  <span className='card-num'>01.</span> <strong>Air</strong>{' '}
-                  Freight{' '}
-                </h4>
-                <p>
-                  We offer a Global Logistics Network with our Worldwide
-                  offices.
-                </p>
+          <SwiperSlide>
+            <div className='card'>
+              <div className='card-img'>
+                <img src={airplaneImg} alt='' />
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='card'>
-                <div className='card-img'>
-                  <img src={truckImg} alt='' />
-                </div>
-                <h4>
-                  {' '}
-                  <span className='card-num'>01.</span> <strong>Cargo</strong>{' '}
-                  Delivery{' '}
-                </h4>
-                <p>
-                  We offer a Global Logistics Network with our Worldwide
-                  offices.
-                </p>
+              <h4>
+                {' '}
+                <span className='card-num'>01.</span> <strong>Air</strong>{' '}
+                Freight{' '}
+              </h4>
+              <p>
+                We offer a Global Logistics Network with our Worldwide offices.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='card'>
+              <div className='card-img'>
+                <img src={truckImg} alt='' />
               </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className='card'>
-                <div className='card-img'>
-                  <img src={shipImg} alt='' />
-                </div>
-                <h4>
-                  {' '}
-                  <span className='card-num'>01.</span> <strong>Storage</strong>{' '}
-                  Facilities{' '}
-                </h4>
-                <p>
-                  We offer a Global Logistics Network with our Worldwide
-                  offices.
-                </p>
+              <h4>
+                {' '}
+                <span className='card-num'>01.</span> <strong>Cargo</strong>{' '}
+                Delivery{' '}
+              </h4>
+              <p>
+                We offer a Global Logistics Network with our Worldwide offices.
+              </p>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className='card'>
+              <div className='card-img'>
+                <img src={shipImg} alt='' />
               </div>
-            </SwiperSlide>
+              <h4>
+                {' '}
+                <span className='card-num'>01.</span> <strong>Storage</strong>{' '}
+                Facilities{' '}
+              </h4>
+              <p>
+                We offer a Global Logistics Network with our Worldwide offices.
+              </p>
+            </div>
+          </SwiperSlide>
 
-            <SwiperSlide>
-              <div className='card'>
-                <div className='card-img'>
-                  <img src={airplaneImg} alt='' />
-                </div>
-                <h4>
-                  {' '}
-                  <span className='card-num'>01.</span> <strong>Warehousing</strong>{' '}
-                  Facilities{' '}
-                </h4>
-                <p>
-                  We offer a Global Logistics Network with our Worldwide
-                  offices.
-                </p>
+          <SwiperSlide>
+            <div className='card'>
+              <div className='card-img'>
+                <img src={airplaneImg} alt='' />
               </div>
-            </SwiperSlide>
-          </Swiper>
-        </section>
-        <div className='pagination'></div>
+              <h4>
+                {' '}
+                <span className='card-num'>01.</span>{' '}
+                <strong>Warehousing</strong> Facilities{' '}
+              </h4>
+              <p>
+                We offer a Global Logistics Network with our Worldwide offices.
+              </p>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </DivContainer>
     </Section>
   );
