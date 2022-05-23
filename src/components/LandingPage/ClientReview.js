@@ -52,11 +52,11 @@ const ReviewContainer = styled(DivContainer)`
   }
 
   .my-slider{
-    padding: 3rem 0;
+    padding: 3rem 1rem;
   }
 
   .carousel-item {
-    border: 2px solid orange;
+    box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.1);
     padding: 1rem;
     font-size: ${({ theme }) => theme.text_h3};
     background-color: #fff;
