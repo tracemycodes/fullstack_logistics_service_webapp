@@ -88,7 +88,7 @@ const Section = styled.section`
     border-bottom-left-radius: 0.8rem;
     border-bottom-right-radius: 0.8rem;
     box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.1);
-    z-index: 2;
+    // z-index: 2;
     position: relative;
     text-align: left;
     h4 {
@@ -168,11 +168,11 @@ const LogisticsService = () => {
               slidesPerView: 1,
               spaceBetween: 20,
             },
-            640: {
+            690: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            740: {
+            790: {
               slidesPerView: 3,
               spaceBetween: 20,
             },
