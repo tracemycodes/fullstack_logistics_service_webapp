@@ -80,7 +80,6 @@ const Section = styled.section`
       border-top-right-radius: 0.85rem;
     }
   }
-
   .card {
     margin: 1rem 0 4rem;
     color: ${({ theme }) => theme.text_darkBlue};

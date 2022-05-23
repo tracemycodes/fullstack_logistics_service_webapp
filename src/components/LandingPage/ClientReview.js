@@ -1,136 +1,205 @@
-import React from 'react'
-import styled from 'styled-components'
-import { DivContainer } from '../../styles/styles'
+import React from 'react';
+import styled from 'styled-components';
+import { DivContainer } from '../../styles/styles';
+import clientImg from '../../assets/singapore-crane-shipping-cargo.jpg';
 
+// swiper import
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/bundle';
+import './styles.css';
+
+// Import Swiper and modules
+import { Autoplay, EffectFade, Pagination } from 'swiper';
 
 const ReviewSection = styled.section`
-  padding-bottom: 5rem; 
+  padding-bottom: 5rem;
 
   .banner-img {
-    border: 2px solid purple;
     height: 21.6rem;
-    text-align: center;
     position: relative;
-    z-index: -2;
+    z-index: -1;
+    background-image: url(${clientImg});
+    background-size: cover;
+    background-position: top;
 
     :before {
-      content: " ";
+      content: ' ';
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: yellow;
     }
     h2 {
       margin-top: 4rem;
-      font-size: ${({theme}) => theme.text_h2};      
-      color: ${({theme}) => theme.text_darkBlue};   
+      font-size: ${({ theme }) => theme.text_h2};
+      color: ${({ theme }) => theme.text_darkBlue};
     }
-
   }
-
-`
+`;
 
 const ReviewContainer = styled(DivContainer)`
-
+  margin-top: -18rem;
 
   h3 {
     margin: 2.5rem auto 3rem;
     text-align: center;
-    font-size: ${({theme}) => theme.text_h2};
-    color: ${({theme}) => theme.text_darkBlue};
+    font-size: ${({ theme }) => theme.text_h2};
+    color: ${({ theme }) => theme.text_darkBlue};
   }
 
-  .carousel {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-    .carousel-item {
-      border: 2px solid orange;
-      padding: 1.5rem;
-      width: 21rem;
-      font-size: ${({theme}) => theme.text_h3};
-      background-color: #fff;
-      border-radius: .3rem;
-      position: relative;
-      color: ${({theme}) => theme.text_darkBlue};
-      z-index: -1;
+  .carousel-item {
+    border: 2px solid orange;
+    padding: 1.5rem;
+    font-size: ${({ theme }) => theme.text_h3};
+    background-color: #fff;
+    border-radius: 0.3rem;
+    // position: relative;
+    color: ${({ theme }) => theme.text_darkBlue};
 
-      .ques-icon {
-        position: absolute;
-        width: 1.5rem;
-        height: 1.5rem;
-        border: 2px solid black;
-        top: -1rem;
-        right: 1rem;
+    .ques-icon {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      border: 2px solid black;
+      top: -1rem;
+      right: 1rem;
+    }
+
+    .rating {
+      height: 1rem;
+      width: 5rem;
+      border: 2px solid brown;
+      margin: 1rem 0 0.8rem;
+    }
+    .user-info {
+      margin-top: 1rem;
+      display: flex;
+
+      .user-img {
+        width: 2.3rem;
+        height: 2.3rem;
+        border: 2px solid orange;
+        border-radius: 50%;
+        margin-right: 1rem;
       }
-
-      .rating {
-        height: 1rem;
-        width: 5rem;
-        border: 2px solid brown;
-        margin: 1rem 0 .8rem;
+      h4 {
+        font-size: ${({ theme }) => theme.text_h3};
+        margin-bottom: 0.16rem;
       }
-      .user-info {
-        margin-top: 1rem;
-        display: flex;
-
-        .user-img {
-          width: 2.3rem;
-          height: 2.3rem;
-          border: 2px solid orange;
-          border-radius: 50%;
-          margin-right: 1rem;
-        }
-        h4 {
-          font-size: ${({theme}) => theme.text_h3};
-          margin-bottom: .16rem;
-        }
-        p {
-          font-size: ${({theme}) => theme.text_p1};
-      color: ${({theme}) => theme.text_darkBlue};
-        }
+      p {
+        font-size: ${({ theme }) => theme.text_p1};
+        color: ${({ theme }) => theme.text_darkBlue};
       }
     }
   }
-`
+`;
 
 const ClientReview = () => {
   return (
     <ReviewSection>
+      <div className='banner-img'></div>
       <ReviewContainer>
         <h3>Client Review</h3>
-        <div className="carousel">
-          <div className="carousel-item">
-            <div className="ques-icon"></div>
-            <div className="rating"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aperiam ut numquam debitis facere, magnam repellendus voluptates corporis quidem doloremque! Provident, facere quaerat.</p>
-            <div className="user-info">
-              <div className="user-img"></div>
-              <div className="user-details">
-                <h4>David Huxham</h4>
-                <p>Founder, Huxham Inc</p>
+        <Swiper
+          modules={[Autoplay, EffectFade, Pagination]}
+          loop={true}
+          spaceBetween={20}
+          slidesPerView={3}
+          speed={2000}
+          pagination={{
+            clickable: true,
+          }}
+          autoplay={{
+            delay: 2000,
+          }}
+        >
+          <SwiperSlide>
+            <div className='carousel-item'>
+              <div className='ques-icon'></div>
+              <div className='rating'></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis aperiam ut numquam debitis facere, magnam
+                repellendus voluptates corporis quidem doloremque! Provident,
+                facere quaerat.
+              </p>
+              <div className='user-info'>
+                <div className='user-img'></div>
+                <div className='user-details'>
+                  <h4>David Huxham</h4>
+                  <p>Founder, Huxham Inc</p>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="carousel-item">
-            <div className="ques-icon"></div>
-            <div className="rating"></div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aperiam ut numquam debitis facere, magnam repellendus voluptates corporis quidem doloremque! Provident, facere quaerat.</p>
-            <div className="user-info">
-              <div className="user-img"></div>
-              <div className="user-details">
-                <h4>Rebecca Moore</h4>
-                <p>Founder, Huxham Inc</p>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className='carousel-item'>
+              <div className='ques-icon'></div>
+              <div className='rating'></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis aperiam ut numquam debitis facere, magnam
+                repellendus voluptates corporis quidem doloremque! Provident,
+                facere quaerat.
+              </p>
+              <div className='user-info'>
+                <div className='user-img'></div>
+                <div className='user-details'>
+                  <h4>Rebecca Moore</h4>
+                  <p>Founder, Huxham Inc</p>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className='carousel-item'>
+              <div className='ques-icon'></div>
+              <div className='rating'></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis aperiam ut numquam debitis facere, magnam
+                repellendus voluptates corporis quidem doloremque! Provident,
+                facere quaerat.
+              </p>
+              <div className='user-info'>
+                <div className='user-img'></div>
+                <div className='user-details'>
+                  <h4>David Huxham</h4>
+                  <p>Founder, Huxham Inc</p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className='carousel-item'>
+              <div className='ques-icon'></div>
+              <div className='rating'></div>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis aperiam ut numquam debitis facere, magnam
+                repellendus voluptates corporis quidem doloremque! Provident,
+                facere quaerat.
+              </p>
+              <div className='user-info'>
+                <div className='user-img'></div>
+                <div className='user-details'>
+                  <h4>Rebecca Moore</h4>
+                  <p>Founder, Huxham Inc</p>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </ReviewContainer>
     </ReviewSection>
-  )
-}
+  );
+};
 
-export default ClientReview
+export default ClientReview;

@@ -16,6 +16,7 @@ import { Autoplay } from 'swiper';
 const NewsSection = styled.section`
   color: ${({ theme }) => theme.text_darkBlue};
   text-align: center;
+  padding-bottom: 5rem;
   h2 {
     margin: 6rem 0 1rem;
     font-size: ${({ theme }) => theme.text_h2};
