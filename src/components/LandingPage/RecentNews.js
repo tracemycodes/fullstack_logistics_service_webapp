@@ -27,21 +27,22 @@ const NewsSection = styled.section`
     max-width: 35rem;
     font-size: ${({ theme }) => theme.text_p1};
   }
-
+  .my-slide {
+    padding: 0 1rem;
+  }
   article {
-    width: 15.5rem;
     height: 19rem;
-    border: 2px solid green;
+    box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
     text-align: left;
-    display: inline-block;
+    border-radius: .7rem;
 
-    @media (max-width: 765px) {
-      width: 18rem;
-    }
     .news-img {
       height: 10rem;
       border: 2px solid red;
       margin-bottom: 1.5rem;
+      border-top-right-radius: .7rem;
+      border-top-left-radius: .7rem;
     }
     h3 {
       margin: 0 0.5rem;
@@ -51,7 +52,8 @@ const NewsSection = styled.section`
         content: ' ';
         position: absolute;
         width: 2.7rem;
-        border: 1.8px solid red;
+        border: 1.8px solid ${({ theme }) => theme.text_orange};
+        background-color: ${({ theme }) => theme.text_orange};
         border-radius: 30px;
         bottom: -0.4rem;
         left: 0;
@@ -59,7 +61,6 @@ const NewsSection = styled.section`
     }
     p {
       margin: 2rem 0.5rem 1rem;
-      border: 2px solid red;
       width: unset;
       font-size: ${({ theme }) => theme.text_p1};
     }
@@ -98,6 +99,7 @@ const RecentNews = () => {
               spaceBetween: 20,
             },
           }}
+          className='my-slide'
         >
           <SwiperSlide>
             <article>
