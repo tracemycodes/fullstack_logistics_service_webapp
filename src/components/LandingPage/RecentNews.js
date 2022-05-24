@@ -83,7 +83,7 @@ const RecentNews = () => {
           modules={[Autoplay]}
           spaceBetween={10}
           speed={2000}
-          loop={true}
+          // loop={true}
           autoplay={{
             delay: 2000,
           }}
