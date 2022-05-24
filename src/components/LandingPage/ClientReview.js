@@ -32,6 +32,15 @@ const ReviewSection = styled.section`
       left: 0;
       width: 100%;
       height: 100%;
+      background: rgb(255, 255, 255);
+      background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 1) 0%,
+        rgba(0, 39, 65, 1) 0%,
+        rgba(255, 255, 255, 0.17689073920583853) 100%,
+        rgba(255, 255, 255, 0.913585417076987) 100%,
+        rgba(255, 255, 255, 0.08725488486410193) 100%
+      );
     }
     h2 {
       margin-top: 4rem;
@@ -52,7 +61,7 @@ const ReviewContainer = styled(DivContainer)`
   }
 
   .my-slider {
-    padding: 3rem 1rem;
+    padding: 3rem 0.8rem;
   }
 
   .carousel-item {
@@ -127,7 +136,7 @@ const ClientReview = () => {
               spaceBetween: 20,
             },
             580: {
-              slidesPerView: 1,
+              slidesPerView: 2,
               spaceBetween: 20,
             },
           }}
