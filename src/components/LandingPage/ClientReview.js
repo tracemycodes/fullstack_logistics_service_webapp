@@ -51,7 +51,7 @@ const ReviewContainer = styled(DivContainer)`
     color: ${({ theme }) => theme.text_darkBlue};
   }
 
-  .my-slider{
+  .my-slider {
     padding: 3rem 1rem;
   }
 
@@ -61,7 +61,7 @@ const ReviewContainer = styled(DivContainer)`
     font-size: ${({ theme }) => theme.text_h3};
     background-color: #fff;
     border-radius: 0.3rem;
-    position: relative;
+    // position: relative;
     text-align: left;
     color: ${({ theme }) => theme.text_darkBlue};
 
@@ -110,7 +110,7 @@ const ClientReview = () => {
       <ReviewContainer>
         <h3>Client Review</h3>
         <Swiper
-          modules={[Autoplay, EffectFade, Pagination]}
+          modules={[Autoplay, Pagination]}
           loop={true}
           spaceBetween={40}
           slidesPerView={2}
@@ -120,6 +120,16 @@ const ClientReview = () => {
           }}
           autoplay={{
             delay: 2000,
+          }}
+          breakpoints={{
+            180: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            580: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
           }}
           className='my-slider'
         >

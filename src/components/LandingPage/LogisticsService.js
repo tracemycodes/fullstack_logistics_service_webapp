@@ -156,13 +156,17 @@ const LogisticsService = () => {
           modules={[Navigation, Pagination]}
           loop={true}
           spaceBetween={30}
-          slidesPerView={3}
+          // slidesPerView={3}
           speed={2000}
           pagination={{
             clickable: true,
           }}
           navigation={true}
           breakpoints={{
+            170: {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
             570: {
               slidesPerView: 1,
               spaceBetween: 20,
