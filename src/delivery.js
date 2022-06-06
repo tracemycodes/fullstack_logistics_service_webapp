@@ -41,7 +41,188 @@ const logisticSectionInfo = {
   text: 'Solving your supply chain needs from end to end taking the complexity out of container shipping. We are at the forefront of developing innovation',
   tabGroup: [
     {
-      icon:
-    }
-  ]
+      id: '01',
+      icon: '../../assets/icons/movers.svg',
+      tabHeader: 'Business Logistics',
+    },
+    {
+      id: '02',
+      icon: '../../assets/icons/truck-loading.svg',
+      tabHeader: 'Military Logistics',
+    },
+    {
+      id: '03',
+      icon: '../../assets/icons/reschedule-date.svg',
+      tabHeader: 'Event Logistics',
+    },
+  ],
+  cardInfo: [
+    {
+      id: '01',
+      cardImg: '../../assets/truck-img.jpg',
+      cardHeader: 'Truck',
+      subHeader: 'Delivery',
+      cardText:
+        'We offer a Global Logistics Network with our Worldwide offices.',
+    },
+    {
+      id: '02',
+      cardImg: '../../assets/ship-cargo.jpg',
+      cardHeader: 'Ocean',
+      subHeader: 'Shipping',
+      cardText:
+        'We offer a Global Logistics Network with our Worldwide offices.',
+    },
+    {
+      id: '03',
+      cardImg: '../../assets/plane-flying.jpg',
+      cardHeader: 'Air',
+      subHeader: 'Freight',
+      cardText:
+        'We offer a Global Logistics Network with our Worldwide offices.',
+    },
+    {
+      id: '04',
+      cardImg: '../../assets/truck-img.jpg',
+      cardHeader: 'Cargo',
+      subHeader: 'Delivery',
+      cardText:
+        'We offer a Global Logistics Network with our Worldwide offices.',
+    },
+    {
+      id: '05',
+      cardImg: '../../assets/ship-cargo.jpg',
+      cardHeader: 'Storage',
+      subHeader: 'Facilities',
+      cardText:
+        'We offer a Global Logistics Network with our Worldwide offices.',
+    },
+    {
+      id: '06',
+      cardImg: '../../assets/plane-flying.jpg.jpg',
+      cardHeader: 'Warehousing',
+      subHeader: 'Facilities',
+      cardText:
+        'We offer a Global Logistics Network with our Worldwide offices.',
+    },
+  ],
+};
+
+const trackSectionInfo = {
+  header: 'Track your shipment with our latest shipment Tracker',
+  trackImg: '../../assets/31226.jpg',
+  h2: 'Global Leader of the Logistics',
+  h3: 'All our efforts and investments are geared towards offering better solutions.',
+  text: 'Solving Your supply chain needs from end to end, taking the complexity out of container shipping. We are at the forefront of developing innovative supply chain solutions.',
+};
+
+const shipSmartInfo = {
+  header: 'Ship Smart with Transtics',
+  text: 'Solving Your supply chain needs from end to end, taking the complexity out of container shipping. We are at the forefront of developing innovative supply chain solutions',
+  img: '../../assets/11045.jpg',
+};
+
+const meritsInfo = {
+  img: '../../assets/habour-img.jpg',
+  slider: [
+    {
+      header: 'Our Advantages',
+      meritText: [
+        {
+          id: '01',
+          icon: '../../assets/icons/forklift.svg',
+          h2: 'Warehouse Facility',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!',
+        },
+        {
+          id: '02',
+          icon: '../../assets/icons/female-services-support.svg',
+          h2: 'Customer Satisfaction',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!',
+        },
+        {
+          id: '03',
+          icon: '../../assets/icons/road-map.svg',
+          h2: 'Real-time Cargo Tracking',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!',
+        },
+      ],
+    },
+    // next slider
+
+    {
+      header: 'Our Advantages',
+      meritText: [
+        {
+          id: '01',
+          icon: '../../assets/icons/forklift.svg',
+          h2: 'Warehouse Facility',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!',
+        },
+        {
+          id: '02',
+          icon: '../../assets/icons/female-services-support.svg',
+          h2: 'Customer Satisfaction',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!',
+        },
+        {
+          id: '03',
+          icon: '../../assets/icons/road-map.svg',
+          h2: 'Real-time Cargo Tracking',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!',
+        },
+      ],
+    },
+
+    // next slider
+
+    {
+      header: 'Our Advantages',
+      meritText: [
+        {
+          id: '01',
+          icon: '../../assets/icons/forklift.svg',
+          h2: 'Warehouse Facility',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!',
+        },
+        {
+          id: '02',
+          icon: '../../assets/icons/female-services-support.svg',
+          h2: 'Customer Satisfaction',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!',
+        },
+        {
+          id: '03',
+          icon: '../../assets/icons/road-map.svg',
+          h2: 'Real-time Cargo Tracking',
+          text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut mollitia exercitationem vitae, veritatis quidem velit!',
+        },
+      ],
+    },
+  ],
+};
+
+const recentNewsInfo = {
+  header: 'Recent News',
+  text: 'Solving your supply chain needs from end to end, taking the complexity out of container shipping We are the forefront of developing innovation.',
+  slider: [
+    {
+      id: '01',
+      img: '',
+      h3: 'Denso invests $10mn in india distribution',
+      p1: 'By HARRY MENEAR - Mar 16, 2021 - 9:00AM',
+    },
+    {
+      id: '02',
+      img: '',
+      h3: 'Denso invests $10mn in india distribution',
+      p1: 'By HARRY MENEAR - Mar 16, 2021 - 9:00AM',
+    },
+    {
+      id: '03',
+      img: '',
+      h3: 'Denso invests $10mn in india distribution',
+      p1: 'By HARRY MENEAR - Mar 16, 2021 - 9:00AM',
+    },
+  ],
 };
