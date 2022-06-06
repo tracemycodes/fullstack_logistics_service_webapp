@@ -2,6 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { DivContainer } from '../../styles/styles';
 import clientImg from '../../assets/singapore-crane-shipping-cargo.jpg';
+import quoteIcon from '../../assets/icons/quote-right.svg';
+import starLineIcon from '../../assets/icons/star-line-yellow.svg';
+import starIcon from '../../assets/icons/star-symbol.svg';
 
 // swiper import
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -78,16 +81,21 @@ const ReviewContainer = styled(DivContainer)`
       position: absolute;
       width: 1.5rem;
       height: 1.5rem;
-      border: 2px solid black;
       top: -1rem;
       right: 1rem;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: ${({ theme }) => theme.icon_filter};
+      }
     }
 
     .rating {
       height: 1rem;
-      width: 5rem;
-      border: 2px solid brown;
+      width: 6rem;
       margin: 1rem 0 0.8rem;
+      display: flex;
     }
     .user-info {
       margin-top: 1rem;
@@ -144,8 +152,16 @@ const ClientReview = () => {
         >
           <SwiperSlide>
             <div className='carousel-item'>
-              <div className='ques-icon'></div>
-              <div className='rating'></div>
+              <div className='ques-icon'>
+                <img src={quoteIcon} alt='' />
+              </div>
+              <div className='rating'>
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+                <img src={starLineIcon} alt='' />
+              </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Perferendis aperiam ut numquam debitis facere, magnam
@@ -164,8 +180,16 @@ const ClientReview = () => {
 
           <SwiperSlide>
             <div className='carousel-item'>
-              <div className='ques-icon'></div>
-              <div className='rating'></div>
+              <div className='ques-icon'>
+                <img src={quoteIcon} alt='' />
+              </div>
+              <div className='rating'>
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+                <img src={starLineIcon} alt='' />
+                <img src={starLineIcon} alt='' />
+              </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Perferendis aperiam ut numquam debitis facere, magnam
@@ -184,8 +208,15 @@ const ClientReview = () => {
 
           <SwiperSlide>
             <div className='carousel-item'>
-              <div className='ques-icon'></div>
-              <div className='rating'></div>
+              <div className='ques-icon'>
+                <img src={quoteIcon} alt='' />
+              </div>
+              <div className='rating'>
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+              </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Perferendis aperiam ut numquam debitis facere, magnam
@@ -204,8 +235,16 @@ const ClientReview = () => {
 
           <SwiperSlide>
             <div className='carousel-item'>
-              <div className='ques-icon'></div>
-              <div className='rating'></div>
+              <div className='ques-icon'>
+                <img src={quoteIcon} alt='' />
+              </div>
+              <div className='rating'>
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+                <img src={starIcon} alt='' />
+                <img src={starLineIcon} alt='' />
+              </div>
               <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Perferendis aperiam ut numquam debitis facere, magnam
