@@ -7,40 +7,44 @@ const ShipmentSchema = mongoose.Schema({
   },
   orderId: {
     type: String,
-    required: true,
+    // required: true,
     unique: true,
   },
   orderTime: {
-    type: String,
-    required: true,
+    type: Date,
+    // required: true,
   },
   product: {
     type: Object,
-    required: true,
+    // required: true,
   },
   date: {
     type: Date,
-    required: Date.now,
+    // required: Date.now,
   },
   deliveryStatus: {
     type: String,
-    required: true,
+    // required: true,
   },
   arrival: {
     type: String,
-    required: true,
+    // required: true,
   },
   price: {
     type: String,
-    required: true,
+    // required: true,
   },
   shipmentFrom: {
     type: String,
-    required: true,
+    // required: true,
   },
   shipmentTo: {
     type: String,
-    required: true,
+    // required: true,
+  },
+  presentLocation: {
+    type: String,
+    // required: true,
   },
 });
 
