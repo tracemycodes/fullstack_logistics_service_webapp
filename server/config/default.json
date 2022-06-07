@@ -1,0 +1,4 @@
+{
+  "mongoURI": "mongodb+srv://tracemycodes:tracemycodes@cluster0.reqi8.mongodb.net/?retryWrites=true&w=majority",
+  "jwtSecret": "secret"
+}
