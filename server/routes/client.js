@@ -7,11 +7,24 @@ const { check, validationResult } = require('express-validator');
 
 const Admin = require('../models/Admin');
 
+const Shipment = require('../models/Shipment');
+
 // @route   GET api/client
 // @desc    get tracking info
 // @access  public
-router.get('/', (req, res) => {
-  res.send('tracking info gotten');
+router.get('/:id', async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const shipment = await Shipment.find({ orderId: id });
+    if (!shipment || shipment.length === 0) {
+      return res.status(400).json({ msg: 'Shipment order does not exit' });
+    }
+    res.json(shipment[0]);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server error');
+  }
 });
 
 // @route   POST api/client

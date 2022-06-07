@@ -66,15 +66,53 @@ router.post('/', auth, async (req, res) => {
 // @route   PUT api/admin/:id
 // @desc    update a particular shipment
 // @access  private
-router.put('/:id', (req, res) => {
-  res.send('update shipment');
+router.put('/:id', auth, async (req, res) => {
+  const id = req.params.id;
+  const updatedData = req.body;
+  const options = { new: true };
+
+  try {
+    let shipment = await Shipment.findById(id);
+
+    if (!shipment) {
+      return res.status(404).json({ msg: 'Shipment not found' });
+    }
+
+    // if (shipment.admin.toString() !== req.admin.id) {
+    //   return res.status(401).json({ msg: 'Not authorized' });
+    // }
+
+    const result = await Shipment.findByIdAndUpdate(id, updatedData, options);
+    res.json(result);
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
 });
 
 // @route   DELETE api/admin/:id
 // @desc    delete a particular shipment
 // @access  private
-router.delete('/:id', (req, res) => {
-  res.send('delete shipment');
+router.delete('/:id', auth, async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    let shipment = await Shipment.findById(id);
+
+    if (!shipment) {
+      return res.status(404).json({ msg: 'Shipment not found' });
+    }
+
+    // if (shipment.admin.toString() !== req.admin.id) {
+    //   return res.status(401).json({ msg: 'Not authorized' });
+    // }
+
+    await Shipment.findByIdAndRemove(id);
+    res.json({ msg: 'Contact deleted' });
+  } catch (error) {
+    console.error(error.message);
+    res.status(500).send('Server Error');
+  }
 });
 
 module.exports = router;
