@@ -1,10 +1,16 @@
 // This file holds all the data used as mock up and content for this application, make changes to get your custom design or to make changes to the different sections.
 
 //All image import files
+
+//Landing page images for slider
 import landingImg1 from './assets/industrial-port-container-yard.jpg';
 import landingImg2 from './assets/ship-container-harbor.jpg';
 import landingImg3 from './assets/factory-worker-landing.jpg';
 import landingImg4 from './assets/aerial-landing.jpg';
+
+// About section icons for carousel
+import containerImg from './assets/icons/cargo-container-crane.svg';
+import shipmentImg from './assets/icons/cruise.svg';
 
 //Contact at the header
 const contact = {
@@ -48,12 +54,23 @@ const aboutPageInfo = {
   text: 'Solving your supply chain needs from end to end taking the complexity out of container shipping. We are at the forefront of developing innovation',
   card: [
     {
-      icon: '../../assets/icons/cargo-container-crane.svg',
+      id: '01',
+      icon: containerImg,
+      header: 'Secured Containers',
       cardInfo:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, eius? Natus magni ab dignissimos officiis. Amet nam ad odio id fugiat voluptatum?',
     },
     {
-      icon: '../../assets/icons/cruise.svg',
+      id: '02',
+      icon: shipmentImg,
+      header: 'Modern Vessels',
+      cardInfo:
+        'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, eius? Natus magni ab dignissimos officiis. Amet nam ad odio id fugiat voluptatum?',
+    },
+    {
+      id: '03',
+      icon: shipmentImg,
+      header: 'Packaged goods',
       cardInfo:
         'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, eius? Natus magni ab dignissimos officiis. Amet nam ad odio id fugiat voluptatum?',
     },
