@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import SideNav from '../SideNav';
 import { NavBtn, NavBody, NavHeader, NavBar, MainNav } from './headerStyles';
+import { contact, navContainer } from '../../delivery';
 
 const Header = () => {
   const [sideNav, setSideNav] = useState(false);
+  const { email, tel } = contact;
+  const { logo, navItems } = navContainer;
 
   const handleOnClick = () => {
     if (sideNav) {
@@ -18,8 +21,8 @@ const Header = () => {
       <NavBar>
         <NavHeader>
           <div>
-            <a href='mailto:'>mail@example.com</a>
-            <a href='tel:+'>+145 (2466) 888</a>
+            <a href='mailto:'>{email}</a>
+            <a href='tel:+'>{tel}</a>
           </div>
           <div>
             <span>ENG</span>
@@ -28,15 +31,14 @@ const Header = () => {
         </NavHeader>
       </NavBar>
       <NavBody toggleNav={sideNav}>
-        <div className='product-logo'></div>
+        <div className='product-logo'>{logo}</div>
         <div className='nav-items'>
           <ul>
-            <li>HOME</li>
-            <li>SERVICES</li>
-            <li>COMPANY</li>
-            <li>PAGES</li>
-            <li>NEWS</li>
-            <li>CONTACT</li>
+            {navItems.map((item) => (
+              <li>
+                <a href=''>{item}</a>
+              </li>
+            ))}
           </ul>
           <NavBtn>GET QUOTE</NavBtn>
         </div>

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Btn, DivContainer } from '../../styles/styles';
 
-const MainNav = styled.header`
+const MainNav = styled.nav`
   width: 100%;
 `;
 
@@ -72,7 +72,13 @@ const NavBody = styled(DivContainer)`
         list-style: none;
         margin-left: 1.4rem;
         cursor: pointer;
-        font-size: clamp(0.65rem, 2vw, 0.8rem);
+        z-index: 1;
+        a {
+          font-size: clamp(0.65rem, 2vw, 0.8rem);
+          text-decoration: none;
+          cursor: pointer;
+          color: ${({ theme }) => theme.text_grey};
+        }
       }
     }
   }
@@ -80,6 +86,8 @@ const NavBody = styled(DivContainer)`
 
 const NavBtn = styled(Btn)`
   margin-left: 3.5rem;
+  z-index: 1;
+  cursor: pointer;
   @media (max-width: 793px) {
     margin-left: 1.8rem;
   }
