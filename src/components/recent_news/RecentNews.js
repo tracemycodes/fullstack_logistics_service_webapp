@@ -8,7 +8,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/bundle';
-import './styles.css';
+import '../styles.css';
 
 // Import Swiper and modules
 import { Autoplay } from 'swiper';
@@ -36,14 +36,14 @@ const NewsSection = styled.section`
     box-shadow: 0px 5px 5px 3px rgba(0, 0, 0, 0.1);
     margin-bottom: 1rem;
     text-align: left;
-    border-radius: .7rem;
+    border-radius: 0.7rem;
 
     .news-img {
       height: 10rem;
       border: 2px solid red;
       margin-bottom: 1.5rem;
-      border-top-right-radius: .7rem;
-      border-top-left-radius: .7rem;
+      border-top-right-radius: 0.7rem;
+      border-top-left-radius: 0.7rem;
     }
     h3 {
       margin: 0 0.5rem;

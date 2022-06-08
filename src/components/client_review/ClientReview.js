@@ -12,7 +12,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/bundle';
-import './styles.css';
+import '../styles.css';
 
 // Import Swiper and modules
 import { Autoplay, EffectFade, Pagination } from 'swiper';

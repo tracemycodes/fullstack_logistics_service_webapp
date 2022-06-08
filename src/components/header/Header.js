@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styled, {css} from 'styled-components';
+import styled, { css } from 'styled-components';
 import { Btn, DivContainer } from '../../styles/styles';
 import SideNav from '../SideNav';
 
@@ -8,7 +8,7 @@ const MainNav = styled.header`
 `;
 
 const NavBar = styled.header`
-  background-color: ${({theme}) => theme.background_darkBlue};
+  background-color: ${({ theme }) => theme.background_darkBlue};
 `;
 
 const NavHeader = styled(DivContainer)`
@@ -17,10 +17,10 @@ const NavHeader = styled(DivContainer)`
   font-weight: bold;
   display: flex;
   justify-content: space-between;
-  color: ${({theme}) => theme.text_grey};
+  color: ${({ theme }) => theme.text_grey};
 
   a {
-    color: ${({theme}) => theme.text_grey};
+    color: ${({ theme }) => theme.text_grey};
     margin-right: 0.9rem;
     font-size: 0.75rem;
     text-decoration: none;
@@ -35,7 +35,7 @@ const NavBody = styled(DivContainer)`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: ${({theme}) => theme.text_grey};
+  color: ${({ theme }) => theme.text_grey};
 
   .product-logo {
     border: 2px solid green;
@@ -43,9 +43,9 @@ const NavBody = styled(DivContainer)`
     height: 2rem;
   }
 
-  .nav-items {    
+  .nav-items {
     @media (max-width: 765px) {
-    display: none;
+      display: none;
     }
   }
 
@@ -56,10 +56,10 @@ const NavBody = styled(DivContainer)`
     div {
       border: 2px solid black;
       width: 2rem;
-      margin: .17rem;
+      margin: 0.17rem;
     }
     @media (max-width: 765px) {
-    display: flex;
+      display: flex;
     }
   }
 
@@ -74,7 +74,7 @@ const NavBody = styled(DivContainer)`
         list-style: none;
         margin-left: 1.4rem;
         cursor: pointer;
-        font-size: clamp(0.65rem, 2vw, 0.8rem);        
+        font-size: clamp(0.65rem, 2vw, 0.8rem);
       }
     }
   }
@@ -87,18 +87,16 @@ const NavBtn = styled(Btn)`
   }
 `;
 
-
 const Header = () => {
   const [sideNav, setSideNav] = useState(false);
 
   const handleOnClick = () => {
     if (sideNav) {
-      setSideNav(false)
+      setSideNav(false);
     } else {
-      setSideNav(true)
+      setSideNav(true);
     }
-  }
-
+  };
 
   return (
     <MainNav>
@@ -114,9 +112,9 @@ const Header = () => {
           </div>
         </NavHeader>
       </NavBar>
-      <NavBody toggleNav={sideNav} >
+      <NavBody toggleNav={sideNav}>
         <div className='product-logo'></div>
-        <div className="nav-items">
+        <div className='nav-items'>
           <ul>
             <li>HOME</li>
             <li>SERVICES</li>
@@ -124,16 +122,15 @@ const Header = () => {
             <li>PAGES</li>
             <li>NEWS</li>
             <li>CONTACT</li>
-            <li>O</li>
           </ul>
           <NavBtn>GET QUOTE</NavBtn>
         </div>
-        <div className="nav-hamburger" onClick={handleOnClick}>
-          <div className="first"></div>
-          <div className="second"></div>
-          <div className="third"></div>
+        <div className='nav-hamburger' onClick={handleOnClick}>
+          <div className='first'></div>
+          <div className='second'></div>
+          <div className='third'></div>
         </div>
-        <SideNav toggleNav={sideNav} /> 
+        <SideNav toggleNav={sideNav} />
       </NavBody>
     </MainNav>
   );

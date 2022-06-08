@@ -1,16 +1,15 @@
 import { ThemeProvider } from 'styled-components';
-import AboutShipment from './components/LandingPage/AboutShipment';
-import Advantages from './components/LandingPage/Advantages';
-import ClientReview from './components/LandingPage/ClientReview';
-import Footer from './components/LandingPage/Footer';
-import Header from './components/LandingPage/Header';
+import AboutShipment from './components/about/AboutShipment';
+import Advantages from './components/merits/Advantages';
+import ClientReview from './components/client_review/ClientReview';
+import Footer from './components/footer/Footer';
+import Header from './components/header/Header';
 import LandingPage from './components/LandingPage/LandingPage';
-import LogisticsService from './components/LandingPage/LogisticsService';
-import RecentNews from './components/LandingPage/RecentNews';
-import ShipSmart from './components/LandingPage/ShipSmart';
-import TrackShipment from './components/LandingPage/TrackShipment';
+import LogisticsService from './components/logistics_service/LogisticsService';
+import RecentNews from './components/recent_news/RecentNews';
+import ShipSmart from './components/ship_smart/ShipSmart';
+import TrackShipment from './components/track_shipment/TrackShipment';
 import { LightTheme } from './theme/globalStyle';
-
 
 function App() {
   return (
@@ -23,7 +22,7 @@ function App() {
         <TrackShipment />
         <ShipSmart />
         <Advantages />
-        <RecentNews/>
+        <RecentNews />
         <ClientReview />
         <Footer />
       </ThemeProvider>
