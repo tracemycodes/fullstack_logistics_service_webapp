@@ -14,8 +14,6 @@ export const GlobalStyle = createGlobalStyle`
 body {  
   background-color: #fff;    
   font-family: Arial, Helvetica, sans-serif;
-  // width: 100vw;
-  // overflow: hidden;
 }
 `;
 
@@ -35,6 +33,7 @@ export const LightTheme = {
   text_h4: 'clamp(.8rem, 3.2vw, 1.2rem)',
   text_h5: '0.7rem',
   text_p1: 'clamp(0.55rem, 4.5vw, 0.85rem)',
-  icon_filter: 'brightness(0) saturate(100%) invert(27%) sepia(88%) saturate(7180%) hue-rotate(356deg) brightness(87%) contrast(114%)',
+  icon_filter:
+    'brightness(0) saturate(100%) invert(27%) sepia(88%) saturate(7180%) hue-rotate(356deg) brightness(87%) contrast(114%)',
   lineHeight_h1: 'clamp(2.4rem, 10vw, 3.75rem)',
 };
