@@ -1,5 +1,6 @@
-// this file hold all the data used as mock up and content for this application, make changes to get your custom design
+// This file holds all the data used as mock up and content for this application, make changes to get your custom design or to make changes to the different sections.
 
+//Contact at the header
 const contact = {
   email: 'mail@example.com',
   tel: '+145(2466)888',
@@ -225,4 +226,16 @@ const recentNewsInfo = {
       p1: 'By HARRY MENEAR - Mar 16, 2021 - 9:00AM',
     },
   ],
+};
+
+export {
+  recentNewsInfo,
+  meritsInfo,
+  shipSmartInfo,
+  trackSectionInfo,
+  logisticSectionInfo,
+  aboutPageInfo,
+  landingPageInfo,
+  navContainer,
+  contact,
 };
