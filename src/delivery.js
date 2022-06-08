@@ -1,5 +1,11 @@
 // This file holds all the data used as mock up and content for this application, make changes to get your custom design or to make changes to the different sections.
 
+//All image import files
+import landingImg1 from './assets/industrial-port-container-yard.jpg';
+import landingImg2 from './assets/ship-container-harbor.jpg';
+import landingImg3 from './assets/factory-worker-landing.jpg';
+import landingImg4 from './assets/aerial-landing.jpg';
+
 //Contact at the header
 const contact = {
   email: 'mail@example.com',
@@ -16,6 +22,24 @@ const navContainer = {
 const landingPageInfo = {
   title: 'Shipping Products Worldwide',
   text: 'with 100% Customer Satisfaction',
+  slider: [
+    {
+      id: '01',
+      img: landingImg1,
+    },
+    {
+      id: '02',
+      img: landingImg2,
+    },
+    {
+      id: '03',
+      img: landingImg3,
+    },
+    {
+      id: '04',
+      img: landingImg4,
+    },
+  ],
 };
 
 const aboutPageInfo = {
