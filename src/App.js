@@ -5,6 +5,7 @@ import Header from './components/header/Header';
 import { LightTheme } from './theme/globalStyle';
 import Home from './containers/home/Home';
 import Login from './components/admin/Login';
+import Dashboard from './components/admin/Dashboard';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/admin/login' element={<Login />} />
+            <Route path='/admin/dashboard' element={<Dashboard />} />
           </Routes>
           <Footer />
         </Router>
