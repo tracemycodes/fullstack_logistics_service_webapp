@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled, { css } from 'styled-components';
 import { Btn } from '../styles/styles';
 
@@ -8,6 +8,7 @@ const SideNavBar = styled.section`
   height: 100%;
   top: 0;
   left: 0;
+  z-index: -1;
 
   ${({ toggleNav }) =>
     toggleNav &&
@@ -25,12 +26,14 @@ const SideNavBar = styled.section`
     transition: transform ease-in 0.8s;
     display: flex;
     flex-direction: column;
+    z-index: 5;
 
     ${({ toggleNav }) =>
       toggleNav &&
       css`
         background-color: rgb(0, 39, 65);
         transform: translateX(0%);
+        z-index: 5;
       `}
 
     ul {
@@ -74,35 +77,36 @@ const SideNavBtn = styled(Btn)`
 
 const SideNav = ({ toggleNav }) => {
   return (
-    <SideNavBar toggleNav={toggleNav}>
-      <nav>
-        <a href='#' className='nav-logo'>
-          logo
-        </a>
-
-        <ul>
-          <li>
-            <a href='#'>HOME</a>
-          </li>
-          <li>
-            <a href='#'>SERVICES</a>
-          </li>
-          <li>
-            <a href='#'>COMPANY</a>
-          </li>
-          <li>
-            <a href='#'>PAGES</a>
-          </li>
-          <li>
-            <a href='#'>NEWS</a>
-          </li>
-          <li>
-            <a href='#'>CONTACT</a>
-          </li>
-        </ul>
-        <SideNavBtn>GET QUOTE</SideNavBtn>
-      </nav>
-    </SideNavBar>
+    <Fragment>
+      <SideNavBar toggleNav={toggleNav}>
+        <nav>
+          <a href='#' className='nav-logo'>
+            logo
+          </a>
+          <ul>
+            <li>
+              <a href='#'>HOME</a>
+            </li>
+            <li>
+              <a href='#'>SERVICES</a>
+            </li>
+            <li>
+              <a href='#'>COMPANY</a>
+            </li>
+            <li>
+              <a href='#'>PAGES</a>
+            </li>
+            <li>
+              <a href='#'>NEWS</a>
+            </li>
+            <li>
+              <a href='#'>CONTACT</a>
+            </li>
+          </ul>
+          <SideNavBtn>GET QUOTE</SideNavBtn>
+        </nav>
+      </SideNavBar>
+    </Fragment>
   );
 };
 
