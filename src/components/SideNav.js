@@ -8,7 +8,6 @@ const SideNavBar = styled.section`
   height: 100%;
   top: 0;
   left: 0;
-  transition: background-color ease-in 0.8s;
 
   ${({ toggleNav }) =>
     toggleNav &&

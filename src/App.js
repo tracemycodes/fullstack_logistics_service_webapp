@@ -1,30 +1,21 @@
 import { ThemeProvider } from 'styled-components';
-import AboutShipment from './components/about/AboutShipment';
-import Advantages from './components/merits/Advantages';
-import ClientReview from './components/client_review/ClientReview';
+import { Router, Routes, Route } from 'react-router-dom';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
-import LandingPage from './components/LandingPage/LandingPage';
-import LogisticsService from './components/logistics_service/LogisticsService';
-import RecentNews from './components/recent_news/RecentNews';
-import ShipSmart from './components/ship_smart/ShipSmart';
-import TrackShipment from './components/track_shipment/TrackShipment';
 import { LightTheme } from './theme/globalStyle';
+import Home from './containers/home/Home';
 
 function App() {
   return (
     <div className='App'>
       <ThemeProvider theme={LightTheme}>
-        <Header />
-        <LandingPage />
-        <AboutShipment />
-        <LogisticsService />
-        <TrackShipment />
-        <ShipSmart />
-        <Advantages />
-        <RecentNews />
-        <ClientReview />
-        <Footer />
+        <Router>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+          </Routes>
+          <Footer />
+        </Router>
       </ThemeProvider>
     </div>
   );
