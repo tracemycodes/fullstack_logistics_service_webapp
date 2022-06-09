@@ -6,21 +6,24 @@ import { LightTheme } from './theme/globalStyle';
 import Home from './containers/home/Home';
 import Login from './components/admin/Login';
 import Dashboard from './components/admin/Dashboard';
+import DashboardState from './context/dashboard/DashboardState';
 
 function App() {
   return (
     <div className='App'>
-      <ThemeProvider theme={LightTheme}>
-        <Router>
-          <Header />
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/admin/login' element={<Login />} />
-            <Route path='/admin/dashboard' element={<Dashboard />} />
-          </Routes>
-          <Footer />
-        </Router>
-      </ThemeProvider>
+      <DashboardState>
+        <ThemeProvider theme={LightTheme}>
+          <Router>
+            <Header />
+            <Routes>
+              <Route path='/' element={<Home />} />
+              <Route path='/admin/login' element={<Login />} />
+              <Route path='/admin/dashboard' element={<Dashboard />} />
+            </Routes>
+            <Footer />
+          </Router>
+        </ThemeProvider>
+      </DashboardState>
     </div>
   );
 }

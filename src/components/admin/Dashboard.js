@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import DashboardContext from '../../context/dashboard/dashboardContext';
 import { DivContainer } from '../../styles/styles';
 
 const Dashboard = () => {
+  const dashboardContext = useContext(DashboardContext);
+  const { goods } = dashboardContext;
   const [orderData, setOrderData] = useState({
     product: '',
     price: '',
@@ -11,7 +14,7 @@ const Dashboard = () => {
     presentLocation: '',
     orderTime: '',
     arrival: '',
-    deliveryStatus: '',
+    status: '',
   });
 
   const handleOnChange = (e) => {
@@ -96,11 +99,11 @@ const Dashboard = () => {
             />
           </div>
           <div>
-            <label htmlFor='deliveryStatus'>Delivery Status</label>
+            <label htmlFor='status'>Delivery Status</label>
             <input
               type='text'
-              name='deliveryStatus'
-              id='deliveryStatus'
+              name='status'
+              id='status'
               onChange={handleOnChange}
             />
           </div>
@@ -124,29 +127,31 @@ const Dashboard = () => {
               <th>Destination</th>
               <th>Location</th>
               <th>Date Logged</th>
-              <th>Arrival Date</th>
+              <th>Estimated Arrival</th>
               <th>Status</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <th>1 ......</th>
-              <td>gold</td>
-              <td>$50</td>
-              <td>7tons</td>
-              <td>lagos</td>
-              <td>accra</td>
-              <td>togo</td>
-              <td>7th oct</td>
-              <td>17th nov</td>
-              <td>pending</td>
-              <td>
-                <button>update</button>
-              </td>
-              <td>
-                <button>delete</button>
-              </td>
-            </tr>
+            {goods.map((item, index) => (
+              <tr>
+                <th>{index}</th>
+                <td>{item.product}</td>
+                <td>{item.price}</td>
+                <td>{item.weight}</td>
+                <td>{item.shipmentFrom}</td>
+                <td>{item.shipmentTo}</td>
+                <td>{item.presentLocation}</td>
+                <td>{item.orderTime}</td>
+                <td>{item.arrival}</td>
+                <td>{item.status}</td>
+                <td>
+                  <button>update</button>
+                </td>
+                <td>
+                  <button>delete</button>
+                </td>
+              </tr>
+            ))}
           </tbody>
         </table>
       </DivContainer>
