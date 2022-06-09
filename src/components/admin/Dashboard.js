@@ -104,6 +104,7 @@ const Dashboard = () => {
               onChange={handleOnChange}
             />
           </div>
+          <input type='submit' value='Add Shipment' />
         </form>
         <div className='search-bar'>
           <form>
