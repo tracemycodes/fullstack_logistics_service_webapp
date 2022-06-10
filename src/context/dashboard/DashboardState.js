@@ -11,12 +11,14 @@ import {
   DELETE_GOODS,
   UPDATE_GOODS,
   FILTER_GOODS,
+  CLEAR_CURRENT,
 } from '../types';
 
 const DashboardState = (props) => {
   const initialState = {
     goods: [
       {
+        id: '01',
         product: 'lamp',
         price: '$46',
         weight: '10kg',
@@ -28,6 +30,7 @@ const DashboardState = (props) => {
         status: 'pending',
       },
       {
+        id: '02',
         product: 'lamp',
         price: '$46',
         weight: '10kg',
@@ -39,6 +42,7 @@ const DashboardState = (props) => {
         status: 'pending',
       },
       {
+        id: '03',
         product: 'lamp',
         price: '$46',
         weight: '10kg',
@@ -50,6 +54,7 @@ const DashboardState = (props) => {
         status: 'pending',
       },
       {
+        id: '04',
         product: 'lamp',
         price: '$46',
         weight: '10kg',
@@ -72,16 +77,42 @@ const DashboardState = (props) => {
   const getGoods = () => {};
 
   // add shipments
-  const addGoods = () => {};
+  const addGoods = (shipment) => {
+    dispatch({
+      type: ADD_GOODS,
+      payload: shipment,
+    });
+  };
 
   //delete shipment
-  const deleteGoods = () => {};
+  const deleteGoods = (id) => {
+    console.log('object');
+    dispatch({
+      type: DELETE_GOODS,
+      payload: id,
+    });
+  };
 
   //update shipment
-  const updateGoods = () => {};
+  const updateGoods = (shipment) => {
+    dispatch({
+      type: UPDATE_GOODS,
+      payload: shipment,
+    });
+  };
+
+  //clear current shipment
+  const clearCurrent = () => {
+    dispatch({ type: CLEAR_CURRENT });
+  };
 
   //set current shipment for update
-  const setCurrent = () => {};
+  const setCurrent = (product) => {
+    dispatch({
+      type: CURRENT_GOODS,
+      payload: product,
+    });
+  };
 
   // Filter Contacts
   const filterContact = () => {};
@@ -103,6 +134,7 @@ const DashboardState = (props) => {
         setCurrent,
         filterContact,
         clearFilter,
+        clearCurrent,
       }}
     >
       {props.children}

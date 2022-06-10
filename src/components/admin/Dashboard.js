@@ -1,10 +1,33 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import DashboardContext from '../../context/dashboard/dashboardContext';
 import { DivContainer } from '../../styles/styles';
+import ProductInfo from './ProductInfo';
 
 const Dashboard = () => {
   const dashboardContext = useContext(DashboardContext);
-  const { goods } = dashboardContext;
+  const { goods, addGoods, current, updateGoods, clearCurrent } =
+    dashboardContext;
+
+  useEffect(() => {
+    if (current !== null) {
+      setOrderData(current);
+    } else {
+      setOrderData({
+        product: '',
+        price: '',
+        weight: '',
+        shipmentFrom: '',
+        shipmentTo: '',
+        presentLocation: '',
+        orderTime: '',
+        arrival: '',
+        status: '',
+        Lat: '',
+        Lon: '',
+      });
+    }
+  }, [current]);
+
   const [orderData, setOrderData] = useState({
     product: '',
     price: '',
@@ -15,23 +38,54 @@ const Dashboard = () => {
     orderTime: '',
     arrival: '',
     status: '',
+    Lat: '',
+    Lon: '',
   });
+
+  const {
+    product,
+    price,
+    weight,
+    shipmentFrom,
+    shipmentTo,
+    presentLocation,
+    orderTime,
+    arrival,
+    status,
+    Lat,
+    Lon,
+  } = orderData;
 
   const handleOnChange = (e) => {
     e.preventDefault();
     setOrderData({ ...orderData, [e.target.name]: e.target.value });
   };
 
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    if (current === null) {
+      addGoods(orderData);
+    } else {
+      updateGoods(orderData);
+    }
+    handleClear();
+  };
+
+  const handleClear = () => {
+    clearCurrent();
+  };
+
   return (
     <>
       <DivContainer>
-        <form>
+        <form onSubmit={handleOnSubmit}>
           <div>
             <label htmlFor='product'>Goods</label>
             <input
               type='text'
               name='product'
               id='product'
+              value={product}
               onChange={handleOnChange}
             />
           </div>
@@ -41,6 +95,7 @@ const Dashboard = () => {
               type='text'
               name='price'
               id='price'
+              value={price}
               onChange={handleOnChange}
             />
           </div>
@@ -50,6 +105,7 @@ const Dashboard = () => {
               type='text'
               name='weight'
               id='weight'
+              value={weight}
               onChange={handleOnChange}
             />
           </div>
@@ -59,6 +115,7 @@ const Dashboard = () => {
               type='text'
               name='shipmentFrom'
               id='shipmentFrom'
+              value={shipmentFrom}
               onChange={handleOnChange}
             />
           </div>
@@ -68,6 +125,7 @@ const Dashboard = () => {
               type='text'
               name='shipmentTo'
               id='shipmentTo'
+              value={shipmentTo}
               onChange={handleOnChange}
             />
           </div>
@@ -77,6 +135,25 @@ const Dashboard = () => {
               type='text'
               name='presentLocation'
               id='presentLocation'
+              value={presentLocation}
+              onChange={handleOnChange}
+            />
+          </div>
+          <div>
+            <label htmlFor='Lat'>Lat</label>
+            <input
+              type='text'
+              name='Lat'
+              id='Lat'
+              value={Lat}
+              onChange={handleOnChange}
+            />
+            <label htmlFor='Lon'>Lon</label>
+            <input
+              type='text'
+              name='Lon'
+              id='Lon'
+              value={Lon}
               onChange={handleOnChange}
             />
           </div>
@@ -86,6 +163,7 @@ const Dashboard = () => {
               type='date'
               name='orderTime'
               id='orderTime'
+              value={orderTime}
               onChange={handleOnChange}
             />
           </div>
@@ -95,6 +173,7 @@ const Dashboard = () => {
               type='date'
               name='arrival'
               id='arrival'
+              value={arrival}
               onChange={handleOnChange}
             />
           </div>
@@ -104,10 +183,19 @@ const Dashboard = () => {
               type='text'
               name='status'
               id='status'
+              value={status}
               onChange={handleOnChange}
             />
           </div>
-          <input type='submit' value='Add Shipment' />
+          <input
+            type='submit'
+            value={current ? 'Update Shipment' : 'Add Shipment'}
+          />
+          {current && (
+            <div>
+              <button onClick={handleClear}>Clear</button>
+            </div>
+          )}
         </form>
         <div className='search-bar'>
           <form>
@@ -132,25 +220,8 @@ const Dashboard = () => {
             </tr>
           </thead>
           <tbody>
-            {goods.map((item, index) => (
-              <tr>
-                <th>{index}</th>
-                <td>{item.product}</td>
-                <td>{item.price}</td>
-                <td>{item.weight}</td>
-                <td>{item.shipmentFrom}</td>
-                <td>{item.shipmentTo}</td>
-                <td>{item.presentLocation}</td>
-                <td>{item.orderTime}</td>
-                <td>{item.arrival}</td>
-                <td>{item.status}</td>
-                <td>
-                  <button>update</button>
-                </td>
-                <td>
-                  <button>delete</button>
-                </td>
-              </tr>
+            {goods.map((item) => (
+              <ProductInfo item={item} key={item.id} />
             ))}
           </tbody>
         </table>
