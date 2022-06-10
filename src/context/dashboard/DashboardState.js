@@ -29,11 +29,24 @@ const DashboardState = (props) => {
   const getGoods = () => {};
 
   // add shipments
-  const addGoods = (shipment) => {
-    dispatch({
-      type: ADD_GOODS,
-      payload: shipment,
-    });
+  const addGoods = async (shipment) => {
+    const config = {
+      Headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    try {
+      console.log('send post', shipment);
+      const res = await axios.post('/api/admin', shipment, config);
+
+      dispatch({
+        type: ADD_GOODS,
+        payload: res.data,
+      });
+    } catch (error) {
+      dispatch({ type: GOODS_ERROR, payload: error.response.msg });
+    }
   };
 
   //delete shipment

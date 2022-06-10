@@ -1,6 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const config = require('config');
 const auth = require('../middleware/auth');
 const { check, validationResult } = require('express-validator');
 
@@ -27,31 +26,33 @@ router.get('/', auth, async (req, res) => {
 // @access  private
 router.post('/', auth, async (req, res) => {
   const {
-    orderId,
-    orderTime,
     product,
-    date,
-    deliveryStatus,
-    arrival,
     price,
+    weight,
     shipmentFrom,
     shipmentTo,
     presentLocation,
+    orderTime,
+    arrival,
+    status,
+    lat,
+    lon,
   } = req.body;
 
   try {
     const newShipments = new Shipment({
-      admin: req.admin.id,
-      orderId,
-      orderTime,
       product,
-      date,
-      deliveryStatus,
-      arrival,
       price,
+      weight,
       shipmentFrom,
       shipmentTo,
       presentLocation,
+      orderTime,
+      arrival,
+      status,
+      lat,
+      lon,
+      admin: req.admin.id,
     });
 
     const shipments = await newShipments.save();

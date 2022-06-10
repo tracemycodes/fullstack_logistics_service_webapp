@@ -39,6 +39,11 @@ export default (state, action) => {
           item.id === action.payload.id ? action.payload : item
         ),
       };
+    case GOODS_ERROR:
+      return {
+        ...state,
+        error: action.payload,
+      };
     default:
       return state;
   }

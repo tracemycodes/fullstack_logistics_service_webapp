@@ -25,8 +25,8 @@ const Dashboard = () => {
         orderTime: '',
         arrival: '',
         status: '',
-        Lat: '',
-        Lon: '',
+        lat: '',
+        lon: '',
       });
     }
     //eslint-disable-next-line
@@ -42,8 +42,8 @@ const Dashboard = () => {
     orderTime: '',
     arrival: '',
     status: '',
-    Lat: '',
-    Lon: '',
+    lat: '',
+    lon: '',
   });
 
   const {
@@ -56,8 +56,8 @@ const Dashboard = () => {
     orderTime,
     arrival,
     status,
-    Lat,
-    Lon,
+    lat,
+    lon,
   } = orderData;
 
   const handleOnChange = (e) => {
@@ -73,6 +73,7 @@ const Dashboard = () => {
       updateGoods(orderData);
     }
     handleClear();
+    console.log(orderData);
   };
 
   const handleClear = () => {
@@ -144,20 +145,20 @@ const Dashboard = () => {
             />
           </div>
           <div>
-            <label htmlFor='Lat'>Lat</label>
+            <label htmlFor='lat'>Lat</label>
             <input
               type='text'
-              name='Lat'
-              id='Lat'
-              value={Lat}
+              name='lat'
+              id='lat'
+              value={lat}
               onChange={handleOnChange}
             />
-            <label htmlFor='Lon'>Lon</label>
+            <label htmlFor='lon'>Lon</label>
             <input
               type='text'
-              name='Lon'
-              id='Lon'
-              value={Lon}
+              name='lon'
+              id='lon'
+              value={lon}
               onChange={handleOnChange}
             />
           </div>
