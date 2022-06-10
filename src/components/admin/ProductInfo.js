@@ -14,17 +14,18 @@ const ProductInfo = ({ item }) => {
     orderTime,
     arrival,
     status,
-    id,
+    _id,
   } = item;
 
   const handleOnClick = () => {
-    deleteGoods(id);
+    console.log(item);
+    deleteGoods(_id);
   };
 
   return (
     <>
       <tr>
-        <th>{id}</th>
+        <th>{_id}</th>
         <td>{product}</td>
         <td>{price}</td>
         <td>{weight}</td>

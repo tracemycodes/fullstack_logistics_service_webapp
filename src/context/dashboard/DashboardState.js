@@ -26,7 +26,20 @@ const DashboardState = (props) => {
   const [state, dispatch] = useReducer(DashboardReducer, initialState);
 
   //get goods from database
-  const getGoods = () => {};
+  const getGoods = async () => {
+    try {
+      const res = await axios.get('/api/admin');
+      dispatch({
+        type: GET_GOODS,
+        payload: res.data,
+      });
+    } catch (error) {
+      dispatch({
+        type: GOODS_ERROR,
+        payload: error.response.msg,
+      });
+    }
+  };
 
   // add shipments
   const addGoods = async (shipment) => {
@@ -50,20 +63,35 @@ const DashboardState = (props) => {
   };
 
   //delete shipment
-  const deleteGoods = (id) => {
-    console.log('object');
-    dispatch({
-      type: DELETE_GOODS,
-      payload: id,
-    });
+  const deleteGoods = async (id) => {
+    console.log(id);
+    try {
+      await axios.delete(`/api/admin/${id}`);
+      dispatch({ type: DELETE_GOODS, payload: id });
+    } catch (error) {
+      dispatch({ type: GOODS_ERROR, payload: error.response.msg });
+    }
   };
 
   //update shipment
-  const updateGoods = (shipment) => {
-    dispatch({
-      type: UPDATE_GOODS,
-      payload: shipment,
-    });
+  const updateGoods = async (shipment) => {
+    const config = {
+      Headers: {
+        'Content-Type': 'application/json',
+      },
+    };
+
+    console.log(shipment);
+    try {
+      const res = await axios.put(
+        `/api/admin/${shipment._id}`,
+        shipment,
+        config
+      );
+      dispatch({ type: UPDATE_GOODS, payload: res.data });
+    } catch (error) {
+      dispatch({ type: GOODS_ERROR, payload: error.response.msg });
+    }
   };
 
   //clear current shipment

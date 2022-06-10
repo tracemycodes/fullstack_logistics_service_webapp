@@ -7,11 +7,12 @@ import ProductInfo from './ProductInfo';
 const Dashboard = () => {
   const authContext = useContext(AuthContext);
   const dashboardContext = useContext(DashboardContext);
-  const { goods, addGoods, current, updateGoods, clearCurrent } =
+  const { goods, addGoods, getGoods, current, updateGoods, clearCurrent } =
     dashboardContext;
 
   useEffect(() => {
     authContext.loadAdmin();
+    getGoods();
     if (current !== null) {
       setOrderData(current);
     } else {
@@ -212,7 +213,7 @@ const Dashboard = () => {
         <table>
           <thead>
             <tr>
-              <th></th>
+              <th>Tracking ID</th>
               <th>Goods</th>
               <th>Price</th>
               <th>Weight</th>

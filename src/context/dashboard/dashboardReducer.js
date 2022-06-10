@@ -12,15 +12,23 @@ import {
 
 export default (state, action) => {
   switch (action.type) {
+    case GET_GOODS:
+      return {
+        ...state,
+        goods: action.payload,
+        loading: false,
+      };
     case ADD_GOODS:
       return {
         ...state,
         goods: [...state.goods, action.payload],
+        loading: false,
       };
     case DELETE_GOODS:
       return {
         ...state,
-        goods: state.goods.filter((item) => item.id !== action.payload),
+        goods: state.goods.filter((item) => item._id !== action.payload),
+        loading: false,
       };
     case CURRENT_GOODS:
       return {
@@ -36,8 +44,9 @@ export default (state, action) => {
       return {
         ...state,
         goods: state.goods.map((item) =>
-          item.id === action.payload.id ? action.payload : item
+          item._id === action.payload._id ? action.payload : item
         ),
+        loading: false,
       };
     case GOODS_ERROR:
       return {
