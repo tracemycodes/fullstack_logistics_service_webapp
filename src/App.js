@@ -8,6 +8,7 @@ import Login from './components/admin/Login';
 import Dashboard from './components/admin/Dashboard';
 import DashboardState from './context/dashboard/DashboardState';
 import AuthState from './context/auth/AuthState';
+import PrivateRoute from './components/routing/PrivateRoute';
 
 function App() {
   return (
@@ -20,7 +21,14 @@ function App() {
               <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/admin/login' element={<Login />} />
-                <Route path='/admin/dashboard' element={<Dashboard />} />
+                <Route
+                  path='/admin/dashboard'
+                  element={
+                    <PrivateRoute>
+                      <Dashboard />
+                    </PrivateRoute>
+                  }
+                />
               </Routes>
               <Footer />
             </Router>
