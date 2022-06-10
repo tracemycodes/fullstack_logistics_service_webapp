@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import axios from 'axios';
 import DashboardContext from './dashboardContext';
 import DashboardReducer from './dashboardReducer';
 
@@ -16,56 +17,7 @@ import {
 
 const DashboardState = (props) => {
   const initialState = {
-    goods: [
-      {
-        id: '01',
-        product: 'lamp',
-        price: '$46',
-        weight: '10kg',
-        shipmentFrom: 'owerri',
-        shipmentTo: 'lagos',
-        presentLocation: 'ondo',
-        orderTime: '4th jun 2013',
-        arrival: '12th may 2013',
-        status: 'pending',
-      },
-      {
-        id: '02',
-        product: 'lamp',
-        price: '$46',
-        weight: '10kg',
-        shipmentFrom: 'owerri',
-        shipmentTo: 'lagos',
-        presentLocation: 'ondo',
-        orderTime: '4th jun 2013',
-        arrival: '12th may 2013',
-        status: 'pending',
-      },
-      {
-        id: '03',
-        product: 'lamp',
-        price: '$46',
-        weight: '10kg',
-        shipmentFrom: 'owerri',
-        shipmentTo: 'lagos',
-        presentLocation: 'ondo',
-        orderTime: '4th jun 2013',
-        arrival: '12th may 2013',
-        status: 'pending',
-      },
-      {
-        id: '04',
-        product: 'lamp',
-        price: '$46',
-        weight: '10kg',
-        shipmentFrom: 'owerri',
-        shipmentTo: 'lagos',
-        presentLocation: 'ondo',
-        orderTime: '4th jun 2013',
-        arrival: '12th may 2013',
-        status: 'pending',
-      },
-    ],
+    goods: [],
     current: null,
     filtered: null,
     error: null,
