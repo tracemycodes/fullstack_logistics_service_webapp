@@ -11,6 +11,7 @@ import {
   LOGOUT,
   CLEAR_ERRORS,
 } from '../types';
+import setAuthToken from '../../utils/setAuthToken';
 
 const AuthState = (props) => {
   const initialState = {
@@ -61,6 +62,7 @@ const AuthState = (props) => {
       });
     }
   };
+
   //Logout
   const logoutAdmin = () => dispatch({ type: LOGOUT });
 

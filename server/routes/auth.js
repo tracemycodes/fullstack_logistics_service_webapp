@@ -8,7 +8,7 @@ const { check, validationResult } = require('express-validator');
 
 const Admin = require('../models/Admin');
 
-// @route   GET api/client
+// @route   GET api/auth
 // @desc    get tracking info
 // @access  public
 router.get('/', auth, async (req, res) => {

@@ -1,10 +1,23 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import AuthContext from '../../context/auth/authContext';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  const navigate = useNavigate();
   const authContext = useContext(AuthContext);
 
-  const { loginAdmin } = authContext;
+  const { loginAdmin, error, clearErrors, isAuthenticated } = authContext;
+
+  useEffect(() => {
+    if (isAuthenticated) {
+      navigate('/admin/dashboard');
+    }
+    if (error === 'Invalid Credentials') {
+      // setAlert(error, 'danger');
+      clearErrors();
+    }
+    //eslint-disable-next-line
+  }, [error, isAuthenticated]);
 
   const [loginData, setLoginData] = useState({
     email: '',
@@ -15,9 +28,9 @@ const Login = () => {
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
-    e.preventDefault();
     if (email === '' || password === '') {
-      setAlert(error, 'danger');
+      // setAlert(error, 'danger');
+      console.log('no paass');
     } else {
       loginAdmin({
         email,
