@@ -1,14 +1,17 @@
 import React, { useContext, useEffect, useState } from 'react';
+import AuthContext from '../../context/auth/authContext';
 import DashboardContext from '../../context/dashboard/dashboardContext';
 import { DivContainer } from '../../styles/styles';
 import ProductInfo from './ProductInfo';
 
 const Dashboard = () => {
+  const authContext = useContext(AuthContext);
   const dashboardContext = useContext(DashboardContext);
   const { goods, addGoods, current, updateGoods, clearCurrent } =
     dashboardContext;
 
   useEffect(() => {
+    authContext.loadAdmin();
     if (current !== null) {
       setOrderData(current);
     } else {
@@ -26,6 +29,7 @@ const Dashboard = () => {
         Lon: '',
       });
     }
+    //eslint-disable-next-line
   }, [current]);
 
   const [orderData, setOrderData] = useState({
